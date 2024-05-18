@@ -1,17 +1,53 @@
 import random
 
 words = [
-    "Elliot",
-    "Steven",
-    "Drew",
-    "Alien",
-    "Hollywood",
-    "Phone",
-    "Amblin",
-    "Bicycle",
-    "Reesespieces",
-    "Strangerthings",
+    "Elliot"
+    "Steven"
+    "Drew"
+    "Alien"
+    "Classic"
+    "Phone"
+    "Amblin"
+    "Bicycle"
+    "Emotion"
+    "Adventure"
     "Racoon"
+    "Gertie"
+    "Mary"
+    "Keys"
+    "Imagination"
+    "Alienation"
+    "Spaceship"
+    "Halloween"
+    "Flying"
+    "Hoodie"
+    "Telepathy"
+    "Friendship"
+    "Home"
+    "Heartlight"
+    "Forest"
+    "Suburbia"
+    "Spielberg"
+    "Universal"
+    "1982"
+    "Effects"
+    "John"
+    "Fiction"
+    "Extraterrestrial"
+    "Lost"
+    "Uplifting"
+    "Iconic"
+    "Symbiosis"
+    "Escape"
+    "Beam"
+    "Communication"
+    "Childhood"
+    "Moon"
+    "Stars"
+    "Outsider"
+    "Fear"
+    "Homecoming"
+    "Wonder"
 ]
 
 
