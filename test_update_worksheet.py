@@ -51,7 +51,10 @@ def update_worksheet(name, score, country):
 
 # Test function with test case
 def test_update_worksheet():
-    name = "WORST PLAYER EVER"
+    """
+    Test the update_worksheet function.
+    """
+    name = "Bing"
     score = 0
     country = "NORWAY"
     update_worksheet(name, score, country)
