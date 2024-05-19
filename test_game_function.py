@@ -6,7 +6,7 @@ from colorama import Fore, init
 from et_hangman_words import get_word
 from et_hangman_art import stages, hangman_logo, game_info
 
-# Setup för Colorama
+# Setup for Colorama
 init(autoreset=True)
 
 # Getting today's date
