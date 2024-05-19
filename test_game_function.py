@@ -41,6 +41,12 @@ C - EXIT THE GAME
 """
 
 
+# Display the hangman stages
+def display_hangman(attempts):
+    """
+    Display the hangman stages during the game
+    """
+    return stages[attemps]
 
 
 # Getting the leaderboard worksheet
