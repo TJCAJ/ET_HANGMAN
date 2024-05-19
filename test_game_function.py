@@ -46,7 +46,7 @@ def display_hangman(attempts):
     """
     Display the hangman stages during the game
     """
-    return stages[attemps]
+    return stages[attempts]
 
 
 # Getting the leaderboard worksheet
