@@ -3,8 +3,8 @@
 import datetime
 import gspread
 from google.oauth2.service_account import Credentials
-from et_hangman_words import *
-from et_hangman_art import *
+from et_hangman_words import get_word
+from et_hangman_art import display_logo, display_rules, stages
 
 import colorama
 from colorama import Fore
