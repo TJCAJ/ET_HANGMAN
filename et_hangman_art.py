@@ -551,7 +551,7 @@ game_info = [
    |  |                | |                         | |                    |  |
    |  |                ===============================                    |  |
    |  |                                                                   |  |
-   |  |  1 - You have 9 attempts to try to find the right password for    |  |
+   |  |  1 - You have 7 attempts to try to find the right password for    |  |
    |  |      E:T.s phone by inputting letters or the full word.           |  |
    |  |      If you succeed E.T. can make his call and go home.           |  |
    |  |                                                                   |  |
