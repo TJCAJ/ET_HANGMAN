@@ -49,6 +49,14 @@ def display_hangman(attempts):
     return stages[attempts]
 
 
+# Display the players score
+def display_score(score):
+    """
+    Displays the players score in the game
+    """
+    print(f"\tSCORE: {score}")
+
+
 # Getting the leaderboard worksheet
 leaderboard = SHEET.worksheet("leaderboard")
 
