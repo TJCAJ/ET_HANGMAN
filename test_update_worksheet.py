@@ -13,7 +13,7 @@ FULLY_WORD_SCORE = 500
 
 # Getting today's date
 date = datetime.datetime.today()
-Date = str(datetime.date.today())
+date = str(datetime.date.today())
 
 # Google Sheets API setup
 SCOPE = [
@@ -32,7 +32,7 @@ SHEET = GSPREAD_CLIENT.open("ET_Hangman_Leaderboard")
 leaderboard = SHEET.worksheet("leaderboard")
 
 
-def update_worksheet(Name, Score, Country):
+def update_worksheet(name, score, country):
     """
     Update a new row in the Hangman worksheet.
     This updates a new row with the rank, name, date, score, and country.
@@ -42,21 +42,21 @@ def update_worksheet(Name, Score, Country):
     # Get all values in the worksheet
     all_values = leaderboard.get_all_values()
     # Determine the next rank
-    Rank = len(all_values)
+    rank = len(all_values)
 
     # Append the new row with rank, name, date, score, and country
-    leaderboard.append_row([Rank, Name, Date, Score, Country])
+    leaderboard.append_row([rank, name, date, score, country])
     print(f"\t{Fore.GREEN}Leaderboard Update successful.\n")
 
 
-# Testa funktionen med ett testfall
+# Test function with test case
 def test_update_worksheet():
-    Name = "WORST PLAYER EVER"
-    Score = 0
-    Country = "NORWAY"
-    update_worksheet(Name, Score, Country)
+    name = "WORST PLAYER EVER"
+    score = 0
+    country = "NORWAY"
+    update_worksheet(name, score, country)
 
 
-# Kör testet
+# Run test
 if __name__ == "__main__":
     test_update_worksheet()
