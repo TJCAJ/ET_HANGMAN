@@ -4,6 +4,8 @@
 import datetime
 import gspread
 from google.oauth2.service_account import Credentials
+from et_hangman_words import *
+from et_hangman_art import *
 from colorama import Fore, init
 from et_hangman_words import get_word
 from et_hangman_art import stages, hangman_logo, game_info
@@ -12,7 +14,7 @@ from et_hangman_art import stages, hangman_logo, game_info
 init(autoreset=True)
 
 # Getting today's date
-date = str(datetime.date.today)
+date = str(datetime.date.today())
 
 # Google Sheets API setup
 SCOPE = [
@@ -85,10 +87,6 @@ def update_worksheet(name, score, country):
     # Append the new row with rank, name, date, score, and country
     leaderboard.append_row([rank, name, date, score, country])
     print(f"\t{Fore.GREEN}Leaderboard Update successful.\n")
-
-
-# Getting the leaderboard worksheet
-leaderboard = SHEET.worksheet("leaderboard")
 
 
 def display_leaderboard():
@@ -203,11 +201,13 @@ def game(random_word):
         print(display_hangman(attempts))
         word_space(f"\t{full_word}")
         print("\n")
-    final_result(guessed, random_word, guessed_right, score)
+    final_result(
+        guessed, random_word, guessed_right, score, player_name, player_country
+    )
 
 
 # Function to display the final result
-def final_result(guessed, random_word, guessed_right, score):
+def final_result(guessed, random_word, guessed_right, score, name, country):
     """
     Check if the player loses or won the game guessing the word letter
     by letter or the word at once
@@ -235,7 +235,7 @@ def final_result(guessed, random_word, guessed_right, score):
         YOU LOSE {player_name}, THE RIGHT WORD WAS {random_word}!
         """
         )
-    update_worksheet(data, score)
+    update_worksheet(name, score, country)
     display_score(score)
 
 
