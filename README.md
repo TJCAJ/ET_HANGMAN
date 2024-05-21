@@ -128,10 +128,130 @@ The player has 7 attempts to try to guess the right word by inputting letters or
 * If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](#Hangman-Stage-10---Win)
 * 7 letters guessed wrong and the player will see the [Loser Feature](#Hangman-Stage-8---lose)
 
+## Storage Data
+
+I have used a Google sheet to save the player name, city, score and date.  This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I will also add these in the Config Vars to these credentials as I will deploy the project in Heroku. As this is sensitive data, I will have to add the creds.json in the Git ignore file. This will ensure that these credentials are not pushed to the repository.
+
+### Code to Connect to Google Sheet
+
+![Code to Connect to Google Sheet](./assets/images/readme/hangman-creds.jpg)
+
+### Google Sheet Hangman Leaderboard
+
+![Google Sheet Hangman Leaderboard](./assets/images/readme/hangman-google-sheet.jpg)
+
+## Technologies Used
+### Languages Used 
+
+* [Python](https://www.python.org/)
+
+#### Python Packages
+
+* [Random](https://docs.python.org/3/library/random.html?highlight=random#module-random): returns a random integer to get a random word
+* [Datetime](https://pypi.org/project/DateTime/): returns the full date
+* [Gspread](https://pypi.org/project/gspread/): allows communication with Google Sheets
+* [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
+* [Time](https://pypi.org/project/time/): defined time sleep
+* [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
+  
+### Frameworks - Libraries - Programs Used
+
+* [GitHub](https://github.com/)
+    * GitHub is used to store the project's code after being pushed from Git
+* [Heroku](https://id.heroku.com)
+    * Heroku was used to deploy the live project
+* [VSCode](https://code.visualstudio.com/)
+    * VSCode was used to create and edit the website and to commit to Git and push to GitHub
+* [Lucidchart](https://lucid.app/)
+    * Lucidchart was used to create the flowchart
+* [PEP8](http://pep8online.com/)
+    * The PEP8 was used to validate all the Python code
+* [Patorjk](https://patorjk.com)
+    * Patorjk (ASCII Art Generator) was used to draw the titles for the game logos
+* [ASCII Art Archive](https://www.asciiart.eu/image-to-ascii)
+    * ASCII Art Archive was used to convert images for the game logos
+
+
+## Testing
+
+### PEP 8 Online
+
+The [PEP8](http://pep8online.com/) This validator is used to validate every Python file in the project to ensure there were no syntax errors in the project.
+
+![PEP8](.).
+* No errors or warnings wwill hopefully be found during the testing of the code in PEP8 (!!!!)
+  
+### Lighthouse 
+
+ Lighthouse will be used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
+
+* Desktop Results:
+
+  ![Lighthouse Result](.).
 
 
 
 
+* 
+## Deploying this Project
+
+* This site was deployed by completing the following steps:
+
+1. Log in to [Heroku](https://id.heroku.com) or create an account
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App
+3. You must enter a unique app name
+4. Next select your region
+5. Click on the Create App button
+6. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+7. Click Reveal Config Vars and enter port into the Key box and 8000 into the Value box and click the Add button
+8. Click Reveal Config Vars again and enter CREDS into the Key box and the Google credentials into the Value box
+9. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes
+10. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order
+11. Scroll to the top of the page and choose the Deploy tab
+12. Select Github as the deployment method
+13. Confirm you want to connect to GitHub
+14. Search for the repository name and click the connect button
+15. Scroll to the bottom of the deploy page and select the preferred deployment type
+16. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+
+## Forking This Project
+
+* Fork this project by following the steps:
+
+1. Open [GitHub](https://github.com/)
+2. Click on the project to be forked
+3. Find the Fork button at the top right of the page
+4. Once you click the button the fork will be in your repository
+
+## Cloning This Project
+
+* Clone this project by following the steps:
+  
+1. Open [GitHub](https://github.com/)
+2. Click on the project to be cloned
+3. You will be provided with three options to choose from, HTTPS, SSH, or GitHub CLI, click the clipboard icon in order to copy the URL
+4. Once you click the button the fork will be in your repository
+5. Open a new terminal
+6. Change the current working directory to the location that you want the cloned directory
+7. Type git clone and paste the URL copied in step 3
+8. Press Enter and the project is cloned
+
+## Credits
+
+### Content
+
+* All the content in the game is original 
+* The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
+
+  
+### Information Sources / Resources
+
+* [W3Schools - Python](https://www.w3schools.com/python/)
+* [Stack Overflow](https://stackoverflow.com/)
+
+
+
+## Special Thanks
 
 
 
