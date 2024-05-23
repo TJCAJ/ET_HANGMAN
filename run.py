@@ -2,6 +2,7 @@
 
 # Modules and libraries
 import datetime
+import os
 import gspread
 from google.oauth2.service_account import Credentials
 from colorama import Fore, init
@@ -10,6 +11,12 @@ from et_hangman_art import stages, hangman_logo, game_info
 
 # Setup for Colorama
 init(autoreset=True)
+
+
+# Define clear screen function
+def cls():
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 # Getting today's date
 DATE = str(datetime.date.today())
@@ -36,6 +43,7 @@ EXTRA_SCORE = 200
 FULLY_WORD_SCORE = 500
 
 # Message for playing again
+
 PLAY_AGAIN_MSG = f"""{Fore.CYAN}
 A - PLAY AGAIN
 B - LEADERBOARD
@@ -104,18 +112,18 @@ def display_leaderboard():
 
     update_data = sorted(score_sheet, key=lambda x: int(x[3]), reverse=True)
 
-    print(f"{Fore.YELLOW}============================================================")
+    print(f"{Fore.YELLOW}====================================================")
     print(f"{Fore.YELLOW}\n\tPOS\tNAME\tDATE\t\tSCORE\tCOUNTRY")
-    print(f"{Fore.YELLOW}============================================================")
+    print(f"{Fore.YELLOW}====================================================")
 
     count = min(len(update_data), 15)
     for i in range(count):
         print(
             f"""
-        {Fore.GREEN}{i+1}\t{update_data[i][1]}\t{update_data[i][2]}\t{
-        update_data[i][3]}\t{update_data[i][4]}"""
+    {Fore.GREEN}{i+1}\t{update_data[i][1]}\t{update_data[i][2]}\t{
+    update_data[i][3]}\t{update_data[i][4]}"""
         )
-    print(f"{Fore.YELLOW}============================================================")
+    print(f"{Fore.YELLOW}====================================================")
 
 
 # Function to play the game
@@ -202,6 +210,7 @@ def game(random_word):
                 guessed = True
                 full_word = random_word
         else:
+            cls()
             print(f"{Fore.YELLOW}\n\tIS NOT VALID GUESS.\n")
         print(display_hangman(attempts))
         word_space(f"\t{full_word}")
@@ -275,6 +284,7 @@ def main():
             )
             break
         else:
+            cls()
             print(
                 f"""{Fore.YELLOW}\n\t
             That is not a valid option. Please try again.\n"""
@@ -292,7 +302,8 @@ if __name__ == "__main__":
         else:
             break
     while True:
-        player_country = input(f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
+        player_country = input
+        (f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
         if len(player_country) == 0:
             print(f"{Fore.RED}This is not a valid country!")
             continue
