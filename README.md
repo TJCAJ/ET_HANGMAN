@@ -79,12 +79,12 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 ### ET Hangman Stage 6
 
 ![Hangman Stage 6]()
-* 5 letters guessed wrong the player will see the E.T. hangman figure and 5 parts of the hangman, rope, head, torso and both arms in red. Also the alert message "Danger Zone" will be displayed.
+* 5 letters guessed wrong the player will see the E.T. hangman figure and 5 parts of the hangman, rope, head, torso and both arms in red.
 
 ### ET Hangman Stage 7
 
 ![Hangman Stage 7]()
-* 6 letters guessed wrong and the player will see the E.T. hangman figure and 6 parts of the hangman rope, head, torso, both arms and left leg in red. Also the alert message "Danger Zone" will be displayed.
+* 6 letters guessed wrong and the player will see the E.T. hangman figure and 6 parts of the hangman rope, head, torso, both arms and left leg in red.
 
 ### ET Hangman Stage 8 - Lose
 ![Hangman Stage 8 - Lose]()
@@ -130,7 +130,7 @@ The player has 7 attempts to try to guess the right word by inputting letters or
 
 ## Storage Data
 
-I have used a Google sheet to save the player name, city, score and date.  This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I will also add these in the Config Vars to these credentials as I will deploy the project in Heroku. As this is sensitive data, I will have to add the creds.json in the Git ignore file. This will ensure that these credentials are not pushed to the repository.
+I have used a Google sheet to save the player name, country, score and date.  This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I will also add these in the Config Vars to these credentials as I will deploy the project in Heroku. As this is sensitive data, I will have to add the creds.json in the Git ignore file. This will ensure that these credentials are not pushed to the repository.
 
 ### Code to Connect to Google Sheet
 
