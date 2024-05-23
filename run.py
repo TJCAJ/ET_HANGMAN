@@ -4,8 +4,6 @@
 import datetime
 import gspread
 from google.oauth2.service_account import Credentials
-from et_hangman_words import *
-from et_hangman_art import *
 from colorama import Fore, init
 from et_hangman_words import get_word
 from et_hangman_art import stages, hangman_logo, game_info
@@ -14,7 +12,7 @@ from et_hangman_art import stages, hangman_logo, game_info
 init(autoreset=True)
 
 # Getting today's date
-date = str(datetime.date.today())
+DATE = str(datetime.date.today())
 
 # Google Sheets API setup
 SCOPE = [
@@ -76,8 +74,15 @@ def update_worksheet(name, score, country):
     """
     Update a new row in the Hangman worksheet.
     This updates a new row with the rank, name, date, score, and country.
+            name (string): Player Name.
+            score (int): Score.
+            country (string); Player's Country.
+
+            Returns;
+                no return
     """
-    print(f"\t{Fore.GREEN}Updating Leaderboard...\n")
+
+    print("\t{}Updating Leaderboard...\n".format(Fore.GREEN))
 
     # Get all values in the worksheet
     all_values = leaderboard.get_all_values()
@@ -85,7 +90,7 @@ def update_worksheet(name, score, country):
     rank = len(all_values)
 
     # Append the new row with rank, name, date, score, and country
-    leaderboard.append_row([rank, name, date, score, country])
+    leaderboard.append_row([rank, name, DATE, score, country])
     print(f"\t{Fore.GREEN}Leaderboard Update successful.\n")
 
 
@@ -254,9 +259,9 @@ def main():
             random_word = get_word()
             game(random_word)
 
-        user_input = input(f"{PLAY_AGAIN_MSG}>>> ").upper()
+        user_input = input(PLAY_AGAIN_MSG + ">>> ").upper()
         if user_input == "A":
-            print(f"\n\tYou have decided to continue playing the game.\n")
+            print("\n\tYou have decided to continue playing the game.\n")
             play_game = True
         elif user_input == "B":
             display_leaderboard()
