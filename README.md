@@ -174,12 +174,11 @@ I have used a Google sheet to save the player name, country, score and date.  Th
 
 ## Testing
 
-### PEP 8 Online
+### PEP 8
 
-The [PEP8](http://pep8online.com/) This validator is used to validate every Python file in the project to ensure there were no syntax errors in the project.
+This validator was installed in VS with pip install pep8 and used to validate every Python file in the project to check for  syntax errors in the project. This was done with the command flake8 in VS. Information about this was found here: [pep8](https://pypi.org/project/pep8/) and here: [flake](https://pypi.org/project/flake8/) [flake8](https://flake8.pycqa.org/en/latest/)
 
-![PEP8](.).
-* No errors or warnings wwill hopefully be found during the testing of the code in PEP8 (!!!!)
+* 3 warnings were found in run.py during the testing of the code in PEP8. None of these affect how the game function.
   
 ### Lighthouse 
 
