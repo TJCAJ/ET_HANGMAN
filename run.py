@@ -302,8 +302,7 @@ if __name__ == "__main__":
         else:
             break
     while True:
-        player_country = input
-        (f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
+        player_country = input(f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
         if len(player_country) == 0:
             print(f"{Fore.RED}This is not a valid country!")
             continue
