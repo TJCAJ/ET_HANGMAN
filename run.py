@@ -48,7 +48,6 @@ EXTRA_SCORE = 200
 FULLY_WORD_SCORE = 500
 
 # Message for playing again
-
 PLAY_AGAIN_MSG = f"""{Fore.CYAN}
 A - PLAY AGAIN
 B - LEADERBOARD
@@ -129,27 +128,29 @@ def display_leaderboard():
     Displays the players 15 best scores
     """
     score_sheet = leaderboard.get_all_values()[1:]
-    for data in score_sheet:
-        data[3] = data[3]
 
     update_data = sorted(score_sheet, key=lambda x: int(x[3]), reverse=True)
 
-    print(f"{Fore.YELLOW}====================================================")
-    print(f"{Fore.YELLOW}\n\tPOS\tNAME\tDATE\t\tSCORE\tCOUNTRY")
-    print(f"{Fore.YELLOW}====================================================")
+    # Column headers
+    headers = ["POS", "NAME", "DATE", "SCORE", "COUNTRY"]
 
-    count = min(len(update_data), 15)
-    for i in range(count):
-        print(
-            f"""
-    {Fore.GREEN}{i+1}\t{update_data[i][1]}\t{update_data[i][2]}\t{
-    update_data[i][3]}\t{update_data[i][4]}"""
-        )
-    print(f"{Fore.YELLOW}====================================================")
+    separator_length = 50
+
+    # Print the headers and table in better columns
+    print("=" * separator_length)
+    print(
+        f"{Fore.YELLOW} {headers[0]:<5} {headers[1]:<10} {headers[2]:<15} {headers[3]:<6} {headers[4]:<8}"
+    )
+    # Print each row of data for better display
+    print("=" * separator_length)
+    for i, row in enumerate(update_data[:15], start=1):
+        print(f"{Fore.GREEN} {i:<5} {row[1]:<10} {row[2]:<15} {row[3]:<6} {row[4]:<8}")
+
+    print("=" * separator_length)
 
 
 # Function to play the game
-def game(random_word):
+def game(random_word, player_name, player_country):
     """
     Game main function
     """
@@ -288,7 +289,7 @@ def main():
     while True:
         if play_game:
             random_word = get_word()
-            game(random_word)
+            game(random_word, player_name, player_country)
 
         user_input = input(PLAY_AGAIN_MSG + ">>> ").upper()
         if user_input == "A":
