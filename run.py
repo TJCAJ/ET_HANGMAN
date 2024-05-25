@@ -64,6 +64,15 @@ def validate_country(country_name, country_list):
     return country_name.upper() in [country.upper() for country in country_list]
 
 
+# Function to validate player's name
+def validate_name(name):
+    """
+    Validate the player's name.
+    Name must not be empty and can only contain letters, max 6 characters long
+    """
+    return name.isalpha() and 0 < len(name) <= 6
+
+
 # Function to display hangman stages
 def display_hangman(tries):
     """
@@ -308,9 +317,9 @@ def main():
 if __name__ == "__main__":
     # Allows the user to input their own name and country to play the game
     while True:
-        player_name = input(f"\n{Fore.CYAN}NAME:\n>>> ").strip().upper()
-        if len(player_name) == 0:
-            print(f"{Fore.RED}This is not a valid name!")
+        player_name = input(f"\n{Fore.CYAN}NAME (max 6 letter):\n>>> ").strip().upper()
+        if not validate_name(player_name):
+            print(f"{Fore.RED}This is not a valid name! Ensure it is max 6 letters")
             continue
         else:
             break
