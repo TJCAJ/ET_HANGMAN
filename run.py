@@ -19,13 +19,15 @@ def cls():
 
 
 # Function to clean the prompt from empty lines
-def remove_empty_lines(text):
-    lines = text.split("\n")
-    non_empty_lines = []
+def clean_prompt(prompt):
+    lines = prompt.split("\n")
+    cleaned_lines = []
+
     for line in lines:
-        if line.strip() != "":
-            non_empty_lines.append(line)
-    return "\n".join(non_empty_lines)
+        cleaned_lines.rstrip()
+        if cleaned_lines or cleaned_lines and cleaned_lines[-1]:
+            cleaned_lines.append(cleaned_lines)
+    return "\n".join(cleaned_lines)
 
 
 # Getting today's date
