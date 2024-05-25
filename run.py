@@ -33,9 +33,14 @@ CREDS = Credentials.from_service_account_file("creds.json")
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("ET_Hangman_Leaderboard")
+# Open world countries sheet
+COUNTRIES_SHEET = GSPREAD_CLIENT.open("world_countries").sheet1
 
 # Getting the leaderboard worksheet
 leaderboard = SHEET.worksheet("leaderboard")
+
+# Getting the world countries worksheet
+countries = COUNTRIES_SHEET.col_values(1)
 
 # Constants for scoring
 CORRECT_GUESSED = 25
@@ -49,6 +54,14 @@ A - PLAY AGAIN
 B - LEADERBOARD
 C - EXIT THE GAME
 """
+
+
+# Function to validate a country
+def validate_country(country_name, country_list):
+    """
+    Validate the country names against the list of countries
+    """
+    return country_name.upper() in [country.upper() for country in country_list]
 
 
 # Function to display hangman stages
@@ -303,7 +316,7 @@ if __name__ == "__main__":
             break
     while True:
         player_country = input(f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
-        if len(player_country) == 0:
+        if len(player_country) == 0 or not validate_country(player_country, countries):
             print(f"{Fore.RED}This is not a valid country!")
             continue
         else:
