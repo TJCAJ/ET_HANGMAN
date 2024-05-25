@@ -130,7 +130,13 @@ The player has 7 attempts to try to guess the right word by inputting letters or
 
 ## Storage Data
 
-I have used a Google sheet to save the player name, country, score and date.  This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I will also add these in the Config Vars to these credentials as I will deploy the project in Heroku. As this is sensitive data, I will have to add the creds.json in the Git ignore file. This will ensure that these credentials are not pushed to the repository.
+### Leaderboard
+I have used a Google sheet to save the player name, country, score and date. This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I havel also added these in the Config Vars to these credentials as I deployed the project in Heroku. Since this is sensitive data, I have added the creds.json in the Git ignore file. This ensure that these credentials are not pushed to the repository.
+
+### World Countries
+I have also used a second Google sheet in order to validate the players country of origin. This sheet is of course also connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. 
+
+I found the list of countries at [gigasheet.com](https://app.gigasheet.com/spreadsheet/list-of-all-countries-in-the-world---spreadsheet/19c9919d_dc1b_41e2_90ea_540d0e241df7?referrerId=https%3A%2F%2Fwww.gigasheet.com%2Fsample-data%2Flist-of-all-countries-in-the-world---spreadsheet)
 
 ### Code to Connect to Google Sheet
 
@@ -139,6 +145,11 @@ I have used a Google sheet to save the player name, country, score and date.  Th
 ### Google Sheet Hangman Leaderboard
 
 ![Google Sheet Hangman Leaderboard](./assets/images/readme/hangman-google-sheet.jpg)
+
+### Google Sheet World Countries
+
+![Google Sheet World Countries](./assets/images/readme/hangman-google-sheet.jpg)
+
 
 ## Technologies Used
 ### Languages Used 
