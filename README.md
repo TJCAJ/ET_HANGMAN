@@ -253,7 +253,9 @@ This validator was installed in VS with pip install pep8 and used to validate ev
 
 - Python Raw Strings - [Python_tutorial](https://www.pythontutorial.net/python-basics/python-raw-strings/)
 
+- Python Interpolation and Formatting - [Real_Python](https://realpython.com/python-f-strings/)
 
+- Remove empty lines from a string - [Sling_Academy](https://www.slingacademy.com/article/python-3-ways-to-remove-empty-lines-from-a-string/)
 
 
 ### Content

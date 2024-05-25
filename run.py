@@ -18,6 +18,16 @@ def cls():
     os.system("cls" if os.name == "nt" else "clear")
 
 
+# Function to clean the prompt from empty lines
+def remove_empty_lines(text):
+    lines = text.split("\n")
+    non_empty_lines = []
+    for line in lines:
+        if line.strip() != "":
+            non_empty_lines.append(line)
+    return "\n".join(non_empty_lines)
+
+
 # Getting today's date
 DATE = str(datetime.date.today())
 
