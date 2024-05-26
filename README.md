@@ -15,28 +15,28 @@ ET Hangman is a Python terminal game, which runs in the Code Institute mock term
 ### User Stories
 
 * As a website creator, I want to:
-  
+
 1. Build an easy app for the users to play the game.
 2. Build a game that is both enjoyable and challenging for the players.
-   
+
 * As a new visitor, I want to:
 
 1. Be able to understand the purpose of the App and start a new game.
 2. Be able to follow the score, see the wrong and right letters appear once I take a turn, and see how many tries remain before the game is over.
 3. Be able to watch my results and other players' results on the Leaderboard.
-   
+
 * As a returning visitor, I want to:
 
 1. Be able to play the game again with a different word as chosen by the computer.
-2. Be challenged and try to improve on my previous scores. 
+2. Be challenged and try to improve on my previous scores.
 3. Compare my scores with other users on the Leaderboard.
-   
+
 ## Design
 
 #### Colours
 * The colours in the game are supplied by the Python Colorama Model
 
-### Flowcharts 
+### Flowcharts
 ![Flowcharts](./assets/images/readme/hangman-flowcharts.jpg)<br>
 The logic and flow behind the game was not to hard, but at first I was thinking about making a game where you should guess numbers isnetad of words, that's why I updated my flowchart where the player should guess a number, to a more common solution where the player should guess a word. I created my flowcharts in [draw.io](https://www.drawio.com/) to help me with the logical flow throughout the application. Shown below.<br>
 
@@ -46,7 +46,7 @@ The logic and flow behind the game was not to hard, but at first I was thinking 
 ![Game Feature](./assets/images/readme/hangman-feature-5.jpg)<br><br>
 
 This feature displays where the main scene happens. Here the user can play and see the following information about the game:
-* Numbers of letters chosen by the computer 
+* Numbers of letters chosen by the computer
 * Hangman stages
 * Letters guessed right
 * Letters guessed wrong
@@ -55,7 +55,7 @@ This feature displays where the main scene happens. Here the user can play and s
 * Input to guess a letter or a full word
 * Input letters to either guess a letter only or the full word
 
-### ET Hangman Stage 2 
+### ET Hangman Stage 2
 
 ![Hangman Stage 2 ]()<br><br>
 Any time the player guesses a wrong letter, a part of the hangman appears
@@ -134,7 +134,7 @@ The player has 7 attempts to try to guess the right word by inputting letters or
 I have used a Google sheet to save the player name, country, score and date. This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I havel also added these in the Config Vars to these credentials as I deployed the project in Heroku. Since this is sensitive data, I have added the creds.json in the Git ignore file. This ensure that these credentials are not pushed to the repository.
 
 ### World Countries
-I have also used a second Google sheet in order to validate the players country of origin. This sheet is of course also connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. 
+I have also used a second Google sheet in order to validate the players country of origin. This sheet is of course also connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform.
 
 I found the list of countries at [gigasheet.com](https://app.gigasheet.com/spreadsheet/list-of-all-countries-in-the-world---spreadsheet/19c9919d_dc1b_41e2_90ea_540d0e241df7?referrerId=https%3A%2F%2Fwww.gigasheet.com%2Fsample-data%2Flist-of-all-countries-in-the-world---spreadsheet)
 
@@ -153,7 +153,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 
 ## Technologies Used
 
-### Languages Used 
+### Languages Used
 
 * [Python](https://www.python.org/)
 
@@ -165,7 +165,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 * [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
 * [Time](https://pypi.org/project/time/): defined time sleep
 * [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
-  
+
 ### Frameworks - Libraries - Programs Used
 
 * [GitHub](https://github.com/)
@@ -191,8 +191,8 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 This validator was installed in VS with pip install pep8 and used to validate every Python file in the project to check for  syntax errors in the project. This was done with the command flake8 in VS. Information about this was found here: [pep8](https://pypi.org/project/pep8/) and here: [flake](https://pypi.org/project/flake8/) [flake8](https://flake8.pycqa.org/en/latest/)
 
 * 3 warnings were found in run.py during the testing of the code in PEP8. None of these affect how the game function.
-  
-### Lighthouse 
+
+### Lighthouse
 
  Lighthouse will be used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
 
@@ -203,7 +203,7 @@ This validator was installed in VS with pip install pep8 and used to validate ev
 
 
 
-* 
+*
 ## Deploying this Project
 
 * This site was deployed by completing the following steps:
@@ -237,7 +237,7 @@ This validator was installed in VS with pip install pep8 and used to validate ev
 ## Cloning This Project
 
 * Clone this project by following the steps:
-  
+
 1. Open [GitHub](https://github.com/)
 2. Click on the project to be cloned
 3. You will be provided with three options to choose from, HTTPS, SSH, or GitHub CLI, click the clipboard icon in order to copy the URL
@@ -257,13 +257,14 @@ This validator was installed in VS with pip install pep8 and used to validate ev
 
 - Remove empty lines from a string - [Sling_Academy](https://www.slingacademy.com/article/python-3-ways-to-remove-empty-lines-from-a-string/)
 
+- Trim Trailing White Space - [Visual_studio_code_user_guide](https://code.visualstudio.com/docs/editor/codebasics#_trim-trailing-whitespace)
 
 ### Content
 
-* All the content in the game is original 
+* All the content in the game is original
 * The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
 
-  
+
 ### Information Sources / Resources
 
 * [W3Schools - Python](https://www.w3schools.com/python/)
