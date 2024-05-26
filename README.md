@@ -9,7 +9,6 @@ ET Hangman is a Python terminal game, which runs in the Code Institute mock term
 [Live Project Here](https://portfolio-project-3.herokuapp.com/)
 
 
-
 ## User Experience - UX
 
 ### User Stories
@@ -84,11 +83,11 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 ### ET Hangman Stage 7
 
 ![Hangman Stage 7]()
-* 6 letters guessed wrong and the player will see the E.T. hangman figure and 6 parts of the hangman rope, head, torso, both arms and left leg in red.
+* 6 letters guessed wrong and the player will see the E.T. hangman figure and 6 parts of the hangman rope, head, torso, both arms and left leg in blue.
 
 ### ET Hangman Stage 8 - Lose
 ![Hangman Stage 8 - Lose]()
-* 7 letters guessed wrong the player will see the full hangman and the game is over.
+* 7 letters guessed wrong the player will see the a new E.T. figure in red and a message that states: "Wrong guess E:T: stays! The game is over and the correct word is revealed for the player while the total score is displayed.
 
 ### ET Hangman Stage 9 - Win
 

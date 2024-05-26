@@ -193,7 +193,7 @@ def game(random_word, player_name, player_country):
         f"""{Fore.LIGHTYELLOW_EX}\t
     YOU HAVE TO GUESS A WORD WITH {len(random_word)} LETTERS"""
     )
-    print(display_hangman(attempts))
+    display_hangman(attempts)
     word_space(f"\t{full_word}")
     print("\n")
     while not guessed and attempts > 0:
@@ -265,7 +265,7 @@ def game(random_word, player_name, player_country):
         else:
             clear_screen()
             print(f"{Fore.LIGHTRED_EX}\n\tIS NOT VALID GUESS.\n")
-        print(display_hangman(attempts))
+        display_hangman(attempts)
         word_space(f"\t{full_word}")
         print("\n")
     final_result(
