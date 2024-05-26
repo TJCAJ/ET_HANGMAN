@@ -24,9 +24,9 @@ def clean_prompt(prompt):
     cleaned_lines = []
 
     for line in lines:
-        cleaned_lines.rstrip()
-        if cleaned_lines or cleaned_lines and cleaned_lines[-1]:
-            cleaned_lines.append(cleaned_lines)
+        line = lines.rstrip()
+        if line:
+            cleaned_lines.append(line)
     return "\n".join(cleaned_lines)
 
 
