@@ -161,6 +161,14 @@ def display_leaderboard():
     print("=" * separator_length)
 
 
+# Function to display the welcome message
+def welcome():
+    print(Fore.GREEN + hangman_logo[0])
+    print(Fore.YELLOW + "\nWelcome to the E.T. Hangman Game!")
+    print(Fore.YELLOW + "Try to guess a name or a word, one letter at a time.")
+    print(Fore.YELLOW + "You have a limited number of guesses, so choose wisely!")
+
+
 # Function to play the game
 def game(random_word, player_name, player_country):
     """
@@ -328,6 +336,8 @@ def main():
 
 
 if __name__ == "__main__":
+    welcome()
+    input(f"""\n{Fore.CYAN}PREE ANY KEY TO START THE GAME.\n>>> """)
     # Allows the user to input their own name and country to play the game
     while True:
         player_name = input(f"\n{Fore.CYAN}NAME (max 6 letter):\n>>> ").strip().upper()
