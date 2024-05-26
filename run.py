@@ -14,7 +14,7 @@ init(autoreset=True)
 
 
 # Define clear screen function
-def cls():
+def clear_screen():
     os.system("cls" if os.name == "nt" else "clear")
 
 
@@ -72,8 +72,7 @@ def validate_country(country_name, country_list):
     """
     Validate the country names against the list of countries
     """
-    return country_name.upper() in [country.upper()
-                                    for country in country_list]
+    return country_name.upper() in map (str.upper, country_list)
 
 
 # Function to validate player's name
@@ -113,7 +112,7 @@ def display_score(score):
 
 
 # Function to update the leaderboard
-def update_worksheet(name, score, country):
+def update_leaderboard(name, score, country):
     """
     Update a new row in the Hangman worksheet.
     This updates a new row with the rank, name, date, score, and country.
@@ -262,7 +261,7 @@ def game(random_word, player_name, player_country):
                 guessed = True
                 full_word = random_word
         else:
-            cls()
+            clear_screen()
             print(f"{Fore.LIGHTRED_EX}\n\tIS NOT VALID GUESS.\n")
         print(display_hangman(attempts))
         word_space(f"\t{full_word}")
@@ -288,13 +287,10 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
         score = score + EXTRA_SCORE
     else:
         result_message = f"""{Fore.RED}{hangman_logo[1]}
-        YOU LOSE {name}, THE RIGHT WORD WAS {random_word}!"""
+        YOU LOSE {name}, THE RIGHT WORD WAS {random_word}!\n"""
 
-    # Clean the result message
-    cleaned_result_message = clean_prompt(result_message)
-
-    print(cleaned_result_message)
-    update_worksheet(name, score, country)
+    print(result_message)
+    update_leaderboard(name, score, country)
     display_score(score)
 
 
@@ -329,7 +325,7 @@ def main():
             )
             break
         else:
-            cls()
+            clear_screen()
             print(
                 f"""{Fore.YELLOW}\n\t
             That is not a valid option. Please try again.\n"""
