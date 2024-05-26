@@ -23,7 +23,7 @@ def clean_prompt(prompt):
     lines = prompt.split("\n")
     cleaned_lines = []
 
-    for line in lines: 
+    for line in lines:
         cleaned_lines.rstrip()
         if cleaned_lines or cleaned_lines and cleaned_lines[-1]:
             cleaned_lines.append(cleaned_lines)
@@ -72,7 +72,8 @@ def validate_country(country_name, country_list):
     """
     Validate the country names against the list of countries
     """
-    return country_name.upper() in [country.upper() for country in country_list]
+    return country_name.upper() in [country.upper()
+                                    for country in country_list]
 
 
 # Function to validate player's name
@@ -152,7 +153,7 @@ def display_leaderboard():
     print("=" * separator_length)
     print(
         f"{Fore.YELLOW} {headers[0]:<5} {headers[1]:<10} {headers[2]:<15} "
-            f"{headers[3]:<6} {headers[4]:<8}"
+        f"{headers[3]:<6} {headers[4]:<8}"
     )
     # Print each row of data for better display
     print("=" * separator_length)
@@ -160,7 +161,7 @@ def display_leaderboard():
         print(
             f"{Fore.GREEN} {i:<5} {row[1]:<10} {row[2]:<15} "
             f"{row[3]:<6} {row[4]:<8}"
-            )
+        )
 
     print("=" * separator_length)
 
@@ -170,7 +171,8 @@ def welcome():
     print(Fore.GREEN + hangman_logo[0])
     print(Fore.YELLOW + "\nWelcome to the E.T. Hangman Game!")
     print(Fore.YELLOW + "Try to guess a name or a word, one letter at a time.")
-    print(Fore.YELLOW + "You have a limited number of guesses, so choose wisely!")
+    print(Fore.YELLOW + "You have a limited number of guesses, \
+        so choose wisely!")
 
 
 # Function to play the game
@@ -237,7 +239,8 @@ def game(random_word, player_name, player_country):
                 guessed_right += 1
                 score += CORRECT_GUESSED
                 word_as_list = list(full_word)
-                indices = [i for i, letter in enumerate(random_word) if letter == guess]
+                indices = [i for i, letter in enumerate(
+                    random_word) if letter == guess]
                 for index in indices:
                     word_as_list[index] = guess
                 full_word = "".join(word_as_list)
@@ -344,17 +347,20 @@ if __name__ == "__main__":
     input(f"""\n{Fore.CYAN}PRESS ANY KEY TO START THE GAME.\n>>> """)
     # Allows the user to input their own name and country to play the game
     while True:
-        player_name = input(f"\n{Fore.CYAN}NAME (max 6 letter):\n>>> ").strip().upper()
+        player_name = input(
+            f"\n{Fore.CYAN}NAME (max 6 letter):\n>>> ").strip().upper()
         if not validate_name(player_name):
-            print(f"{Fore.RED}This is not a valid name! Ensure it is max 6 letters")
+            print(f"{Fore.RED}This is not a valid name! \
+                Ensure it is max 6 letters")
             continue
         else:
             break
     while True:
-        player_country = input(f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
+        player_country = input(
+            f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
         if len(player_country) == 0 or not validate_country(
             player_country, countries
-            ):
+        ):
             print(f"{Fore.RED}This is not a valid country!")
             continue
         else:
