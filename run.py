@@ -23,7 +23,7 @@ def clean_prompt(prompt):
     lines = prompt.split("\n")
     cleaned_lines = []
 
-    for line in lines:
+    for line in lines: 
         cleaned_lines.rstrip()
         if cleaned_lines or cleaned_lines and cleaned_lines[-1]:
             cleaned_lines.append(cleaned_lines)
@@ -151,12 +151,16 @@ def display_leaderboard():
     # Print the headers and table in better columns
     print("=" * separator_length)
     print(
-        f"{Fore.YELLOW} {headers[0]:<5} {headers[1]:<10} {headers[2]:<15} {headers[3]:<6} {headers[4]:<8}"
+        f"{Fore.YELLOW} {headers[0]:<5} {headers[1]:<10} {headers[2]:<15} "
+            f"{headers[3]:<6} {headers[4]:<8}"
     )
     # Print each row of data for better display
     print("=" * separator_length)
     for i, row in enumerate(update_data[:15], start=1):
-        print(f"{Fore.GREEN} {i:<5} {row[1]:<10} {row[2]:<15} {row[3]:<6} {row[4]:<8}")
+        print(
+            f"{Fore.GREEN} {i:<5} {row[1]:<10} {row[2]:<15} "
+            f"{row[3]:<6} {row[4]:<8}"
+            )
 
     print("=" * separator_length)
 
@@ -337,7 +341,7 @@ def main():
 
 if __name__ == "__main__":
     welcome()
-    input(f"""\n{Fore.CYAN}PREE ANY KEY TO START THE GAME.\n>>> """)
+    input(f"""\n{Fore.CYAN}PRESS ANY KEY TO START THE GAME.\n>>> """)
     # Allows the user to input their own name and country to play the game
     while True:
         player_name = input(f"\n{Fore.CYAN}NAME (max 6 letter):\n>>> ").strip().upper()
@@ -348,7 +352,9 @@ if __name__ == "__main__":
             break
     while True:
         player_country = input(f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
-        if len(player_country) == 0 or not validate_country(player_country, countries):
+        if len(player_country) == 0 or not validate_country(
+            player_country, countries
+            ):
             print(f"{Fore.RED}This is not a valid country!")
             continue
         else:
