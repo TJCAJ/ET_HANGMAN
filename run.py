@@ -24,7 +24,7 @@ def clean_prompt(prompt):
     cleaned_lines = []
 
     for line in lines:
-        line = lines.rstrip()
+        line = line.rstrip()
         if line:
             cleaned_lines.append(line)
     return "\n".join(cleaned_lines)
@@ -91,7 +91,16 @@ def display_hangman(tries):
     Display hangman stages from the start of the game
     and change anytime the player doesn't guess the right letter
     """
-    return stages[tries]
+    cleaned_stages = remove_empty_lines(stages[tries])
+    print(cleaned_stages)
+
+def remove_empty_lines(text):
+    """
+    Remove empty lines from a text string
+    """
+    lines = text.split("\n")
+    non_empty_lines = [line for line in lines if line.strip()]
+    return "\n".join(non_empty_lines)
 
 
 # Function to add space between letters in the word
