@@ -168,7 +168,7 @@ def display_leaderboard():
 
 # Function to display the welcome message
 def welcome():
-    print(Fore.GREEN + hangman_logo[0])
+    print(Fore.LIGHTGREEN_EX + hangman_logo[0])
     print(Fore.YELLOW + "\nWelcome to the E.T. Hangman Game!")
     print(Fore.YELLOW + "Try to guess a name or a word, one letter at a time.")
     print(Fore.YELLOW + "You have a limited number of guesses, \
@@ -188,9 +188,9 @@ def game(random_word, player_name, player_country):
     guessed_right = 0
     attempts = 7
     score = 0
-    print(f"{Fore.YELLOW}\n\tLET'S PLAY THE HANGMAN GAME!\n")
+    print(f"{Fore.LIGHTYELLOW_EX}\n\tLET'S PLAY THE HANGMAN GAME!\n")
     print(
-        f"""{Fore.YELLOW}\t
+        f"""{Fore.LIGHTYELLOW_EX}\t
     YOU HAVE TO GUESS A WORD WITH {len(random_word)} LETTERS"""
     )
     print(display_hangman(attempts))
@@ -200,26 +200,26 @@ def game(random_word, player_name, player_country):
         print(f"{Fore.RED}\n\tWRONG LETTERS GUESSED:\n\t{guessed_wrong}\n")
         display_score(score)
         print(
-            f"""\n{Fore.CYAN}
+            f"""\n{Fore.LIGHTBLUE_EX}
         ================================================="""
         )
         if attempts > 1:
-            print(f"{Fore.YELLOW}\n\tYOU HAVE {attempts} ATTEMPTS")
+            print(f"{Fore.LIGHTYELLOW_EX}\n\tYOU HAVE {attempts} ATTEMPTS")
         else:
             print(f"{Fore.RED}\n\tYOU HAVE {attempts} ATTEMPT LEFT\n")
         guess = input(
-            f"""{Fore.CYAN}\t\t
+            f"""{Fore.LIGHTBLUE_EX}\t\t
         GUESS A LETTER OR A WORD PLEASE:\n\t>>> """
         ).upper()
         print(
-            f"""\n{Fore.CYAN}
+            f"""\n{Fore.LIGHTMAGENTA_EX}
         ================================================="""
         )
         # Check if the player has already guessed the letter
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
                 print(
-                    f"""{Fore.YELLOW}\n\t
+                    f"""{Fore.LIGHTYELLOW_EX}\n\t
                 YOU HAVE ALREADY GUESSED THIS LETTER {guess}\n"""
                 )
             elif guess not in random_word:
@@ -249,11 +249,11 @@ def game(random_word, player_name, player_country):
         elif len(guess) == len(random_word) and guess.isalpha():
             if guess in guessed_words:
                 print(
-                    f"""{Fore.YELLOW}\n\t
+                    f"""{Fore.LIGHTRED_EX}\n\t
                 YOU HAVE GUESSED THE WORD {guess} ALREADY."""
                 )
             elif guess != random_word:
-                print(f"{Fore.RED}\n\t{guess}, IS NOT THE WORD. TRY AGAIN!")
+                print(f"{Fore.LIGHTRED_EX}\n\t{guess}, IS NOT THE WORD. TRY AGAIN!")
                 attempts -= 1
                 guessed_words.append(guess)
             else:
@@ -261,7 +261,7 @@ def game(random_word, player_name, player_country):
                 full_word = random_word
         else:
             cls()
-            print(f"{Fore.YELLOW}\n\tIS NOT VALID GUESS.\n")
+            print(f"{Fore.LIGHTRED_EX}\n\tIS NOT VALID GUESS.\n")
         print(display_hangman(attempts))
         word_space(f"\t{full_word}")
         print("\n")
@@ -279,7 +279,7 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
     if guessed and len(random_word) >= 6 and guessed_right <= 3:
         print(f"{Fore.GREEN}{hangman_logo[3]}")
         print(
-            f"""{Fore.GREEN}
+            f"""{Fore.LIGHTGREEN_EX}
         YOU WIN {player_name}, YOU HAVE GUESSED THE WORD COMPLETELY AT ONCE!\n
         """
         )
@@ -287,7 +287,7 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
     elif guessed:
         print(f"{Fore.GREEN}{hangman_logo[2]}")
         print(
-            f"""{Fore.GREEN}
+            f"""{Fore.LIGHTGREEN_EX}
         YOU WIN {player_name}, YOU HAVE GUESSED THE RIGHT WORD!\n
         """
         )
@@ -295,7 +295,7 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
     else:
         print(f"{Fore.RED}{hangman_logo[1]}")
         print(
-            f"""{Fore.RED}
+            f"""{Fore.LIGHTGREEN_EX}
         YOU LOSE {player_name}, THE RIGHT WORD WAS {random_word}!
         """
         )
@@ -326,9 +326,9 @@ def main():
             display_leaderboard()
             play_game = False
         elif user_input == "C":
-            print(f"{Fore.RED}\n\tNow closing the game...")
+            print(f"{Fore.LIGHTRED_EX}\n\tNow closing the game...")
             print(
-                f"""{Fore.CYAN}
+                f"""{Fore.LIGHTCYAN_EX}
             \n\tThanks for playing, {player_name.capitalize()}.
             \n\tHope to see you again soon!\n"""
             )
@@ -369,7 +369,7 @@ if __name__ == "__main__":
         f"""{Fore.YELLOW}\n\t
     HELLO {player_name}, WELCOME TO THE HANGMAN GAME!\n"""
     )
-    print(f"{Fore.BLUE}{game_info[0]}")
+    print(f"{Fore.LIGHTBLUE_EX}{game_info[0]}")
     input(
         f"""\n{Fore.CYAN}
     {player_name}, PRESS ANY KEY TO START THE GAME.\n    >>> """

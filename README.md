@@ -186,9 +186,20 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 
 ## Testing
 
+### **Initial tests**
+
+The primary goal for this project was for me to learn the basis of Python and build a command-line application that allows your users to register and play my own E.T. version of a hangman game that delivers a positive experience for the user. I have used Visual Studio Code to build the game and deployed to Heroku.  I choosed to develop the game functions localy and test the most basic ones in various stages before I deployed and started to build the app in Heroku and run it as a command-line application.
+
+- Macbook Pro (5120 X 2880)
+- LG HDR 4K" Monitor (3840x2160)
+
+![test sheet](./assets/docs/images/test_sheet.png)
+
 ### PEP 8
 
-This validator was installed in VS with pip install pep8 and used to validate every Python file in the project to check for  syntax errors in the project. This was done with the command flake8 in VS. Information about this was found here: [pep8](https://pypi.org/project/pep8/) and here: [flake](https://pypi.org/project/flake8/) [flake8](https://flake8.pycqa.org/en/latest/)
+- This validator was installed in VS with pip install pep8 and used to validate every Python file in the project to check for  syntax errors in the project. This was done with the command flake8 in VS. Information about this was found here: [pep8](https://pypi.org/project/pep8/) and here: [flake](https://pypi.org/project/flake8/) [flake8](https://flake8.pycqa.org/en/latest/)
+
+- [CI_Python_Linter](https://pep8ci.herokuapp.com/) was also used to check all python files for errors, with no errors found.
 
 * 3 warnings were found in run.py during the testing of the code in PEP8. None of these affect how the game function.
 
