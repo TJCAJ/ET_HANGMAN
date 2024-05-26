@@ -91,8 +91,7 @@ def display_hangman(tries):
     Display hangman stages from the start of the game
     and change anytime the player doesn't guess the right letter
     """
-    for line in stages[tries].split('\n'):
-        print(line.rstrip())
+    return stages[tries]
 
 
 # Function to add space between letters in the word
