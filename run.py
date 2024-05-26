@@ -31,7 +31,7 @@ def clean_prompt(prompt):
 
 
 # Getting today's date
-DATE = str(datetime.date.today())
+DATE = datetime.datetime.today().strftime("%Y-%m-%d")
 
 # Google Sheets API setup
 SCOPE = [
@@ -93,15 +93,6 @@ def display_hangman(tries):
     """
     cleaned_stages = clean_prompt(stages[tries])
     print(cleaned_stages)
-
-
-def remove_empty_lines(text):
-    """
-    Remove empty lines from a text string
-    """
-    lines = text.split("\n")
-    non_empty_lines = [line for line in lines if line.strip()]
-    return "\n".join(non_empty_lines)
 
 
 # Function to add space between letters in the word
