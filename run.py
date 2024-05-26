@@ -15,11 +15,14 @@ init(autoreset=True)
 
 # Define clear screen function
 def clear_screen():
+    """Clear the terminal or command line screen."""
     os.system("cls" if os.name == "nt" else "clear")
 
 
 # Function to clean the prompt from empty lines
 def clean_prompt(prompt):
+    """
+    Clean the prompt from empty lines."""
     lines = prompt.split("\n")
     cleaned_lines = []
 
@@ -70,7 +73,7 @@ C - EXIT THE GAME
 # Function to validate a country
 def validate_country(country_name, country_list):
     """
-    Validate the country names against the list of countries
+    Validate the country names against the list of countries.
     """
     return country_name.upper() in map(str.upper, country_list)
 
@@ -79,7 +82,7 @@ def validate_country(country_name, country_list):
 def validate_name(name):
     """
     Validate the player's name.
-    Name must not be empty and can only contain letters, max 6 characters long
+    Name must not be empty and can only contain letters, max 6 characters long.
     """
     return name.isalpha() and 0 < len(name) <= 6
 
@@ -87,8 +90,8 @@ def validate_name(name):
 # Function to display hangman stages
 def display_hangman(tries):
     """
-    Display hangman stages from the start of the game
-    and change anytime the player doesn't guess the right letter
+    Display hangman stages from the start of the game.
+    Change anytime the player doesn't guess the right letter.
     """
     cleaned_stages = clean_prompt(stages[tries])
     print(cleaned_stages)
@@ -97,7 +100,7 @@ def display_hangman(tries):
 # Function to add space between letters in the word
 def word_space(full_word):
     """
-    Add space in between letters in the random word
+    Add space in between letters in the random word.
     """
     for i in full_word:
         print(i, end=" ")
@@ -106,7 +109,7 @@ def word_space(full_word):
 # Function to display player score
 def display_score(score):
     """
-    Display player score during the game
+    Display player score during the game.
     """
     print(f"\tSCORE: {score}")
 
@@ -115,6 +118,7 @@ def display_score(score):
 def update_leaderboard(name, score, country):
     """
     Update a new row in the Hangman worksheet.
+
     This updates a new row with the rank, name, date, score, and country.
             name (string): Player Name.
             score (int): Score.
@@ -123,7 +127,6 @@ def update_leaderboard(name, score, country):
             Returns;
                 no return
     """
-
     print("\t{}Updating Leaderboard...\n".format(Fore.GREEN))
 
     # Get all values in the worksheet
@@ -138,7 +141,7 @@ def update_leaderboard(name, score, country):
 
 def display_leaderboard():
     """
-    Displays the players 15 best scores
+    Display the players 15 best scores.
     """
     score_sheet = leaderboard.get_all_values()[1:]
 
@@ -168,18 +171,20 @@ def display_leaderboard():
 
 # Function to display the welcome message
 def welcome():
+    """
+    Welcome message for new players.
+    """
     print(Fore.LIGHTGREEN_EX + hangman_logo[0])
     print(Fore.YELLOW + "\nWelcome to the E.T. Hangman Game!")
-    print(Fore.YELLOW + "Try to guess a name or a word, one letter at a time.")
-    print(Fore.YELLOW + "You have a limited number of guesses, \
-        so choose wisely!")
+    print(
+        Fore.YELLOW +
+        "Try to guess a name or a word related to the E.T. film.")
+    print(Fore.YELLOW + "You have a limited number of guesses, be wise!")
 
 
 # Function to play the game
 def game(random_word, player_name, player_country):
-    """
-    Game main function
-    """
+    """Game main function."""
     full_word = "_" * len(random_word)
     guessed = False
     guessed_letters = []
@@ -188,10 +193,10 @@ def game(random_word, player_name, player_country):
     guessed_right = 0
     attempts = 7
     score = 0
-    print(f"{Fore.LIGHTYELLOW_EX}\n\tLET'S PLAY THE HANGMAN GAME!\n")
+    print(f"{Fore.LIGHTYELLOW_EX}\n\tLET'S PLAY THE E.T. HANGMAN GAME!\n")
     print(
         f"""{Fore.LIGHTYELLOW_EX}\t
-    YOU HAVE TO GUESS A WORD WITH {len(random_word)} LETTERS"""
+    YOU WILL HAVE TO GUESS A WORD WITH {len(random_word)} LETTERS"""
     )
     display_hangman(attempts)
     word_space(f"\t{full_word}")
@@ -225,7 +230,7 @@ def game(random_word, player_name, player_country):
             elif guess not in random_word:
                 print(
                     f"""{Fore.RED}\n\t
-                {guess} IS NOT IN THE WORD. TRY ANOTHER ONE!\n"""
+                {guess} IS NOT IN THIS WORD. TRY ANOTHER ONE!\n"""
                 )
                 attempts -= 1
                 guessed_letters.append(guess)
@@ -233,7 +238,7 @@ def game(random_word, player_name, player_country):
             else:
                 print(
                     f"""{Fore.GREEN}\n\t
-                GREAT, {guess} IS IN THE WORD! KEEP GOING!\n"""
+                GREAT, {guess} IS IN THE WORD! KEEP ON GOING!\n"""
                 )
                 guessed_letters.append(guess)
                 guessed_right += 1
@@ -254,7 +259,8 @@ def game(random_word, player_name, player_country):
                 )
             elif guess != random_word:
                 print
-                (f"""{Fore.LIGHTRED_EX}\n\t{guess}\n\t
+                (
+                    f"""{Fore.LIGHTRED_EX}\n\t{guess}\n\t
                 IS NOT THE WORD. TRY AGAIN!"""
                 )
                 attempts -= 1
@@ -276,20 +282,26 @@ def game(random_word, player_name, player_country):
 # Function to display the final result
 def final_result(guessed, random_word, guessed_right, score, name, country):
     """
-    Check if the player loses or won the game guessing the word letter
-    by letter or the word at once
+    Check if the player loses or win the game.
+    Player guesses the word letter by letter or the word at once.
     """
     if guessed and len(random_word) >= 6 and guessed_right <= 3:
         result_message = f"""{Fore.GREEN}{hangman_logo[3]}
-        YOU WIN {name}, YOU HAVE GUESSED THE WORD COMPLETELY AT ONCE!\n"""
+        YOU WIN {name}, YOU NAILED THE CORRECT WORD OUTRIGHT AT ONCE!\n"""
         score = score + EXTRA_SCORE + FULLY_WORD_SCORE
     elif guessed:
-        result_message = f"""{Fore.GREEN}{hangman_logo[2]}
-        YOU WIN {name}, YOU HAVE GUESSED THE RIGHT WORD!\n"""
+        result_message = f"""{
+            Fore.GREEN}{
+            hangman_logo[2]}
+        YOU WIN AND E.T. CAN PHONE HOME {name}, \
+            YOU GUESSED THE RIGHT WORD!\n"""
         score = score + EXTRA_SCORE
     else:
-        result_message = f"""{Fore.RED}{hangman_logo[1]}
-        YOU LOSE {name}, THE RIGHT WORD WAS {random_word}!\n"""
+        result_message = f"""{
+            Fore.RED}{
+            hangman_logo[1]}
+        YOU LOSE AND E.T. GETS NO CALL {name}, \
+            THE RIGHT WORD WAS {random_word}!\n"""
 
     print(result_message)
     update_leaderboard(name, score, country)
@@ -299,8 +311,9 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
 # Main function to control the game flow
 def main():
     """
-    Starts the game with a random word.
-    Once a game run is complete, give to the player 3 choices at the end:
+    Start the game with a random word.
+    Once a game run is complete, give the player 3 choices:
+
         * Play again
         * Leaderboard
         * Exit the game
@@ -343,8 +356,10 @@ if __name__ == "__main__":
         player_name = input(
             f"\n{Fore.CYAN}NAME (max 6 letter):\n>>> ").strip().upper()
         if not validate_name(player_name):
-            print(f"{Fore.RED}This is not a valid name! \
-                Ensure it is max 6 letters")
+            print(
+                f"{Fore.RED}This is not a valid name! \
+                Ensure it is max 6 letters"
+            )
             continue
         else:
             break
@@ -352,8 +367,7 @@ if __name__ == "__main__":
         player_country = input(
             f"{Fore.CYAN}YOUR COUNTRY:\n>>> ").strip().upper()
         if len(player_country) == 0 or not validate_country(
-            player_country, countries
-        ):
+                player_country, countries):
             print(f"{Fore.RED}This is not a valid country!")
             continue
         else:

@@ -16,7 +16,7 @@ ET Hangman is a Python terminal game, which runs in the Code Institute mock term
 * As a website creator, I want to:
 
 1. Build an easy app for the users to play the game.
-2. Build a game that is both enjoyable and challenging for the players.
+2. Build a game that is both fun and challenging for the players.
 
 * As a new visitor, I want to:
 
@@ -94,7 +94,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 ![Hangman Stage 9 - Win]()
 * If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
 
-### ET Hangman Stage 10 - Win Extra
+### ET Hangman Stage 10 - Win extra points
 
 ![Hangman Stage 10 - Win Extra]()
 * If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
@@ -162,7 +162,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 * [Datetime](https://pypi.org/project/DateTime/): returns the full date
 * [Gspread](https://pypi.org/project/gspread/): allows communication with Google Sheets
 * [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
-* [Time](https://pypi.org/project/time/): defined time sleep
+* [datetime](https://pypi.org/project/datetime2/): adding the capability of constructing and representing date and time in many formats
 * [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
 
 ### Frameworks - Libraries - Programs Used
@@ -173,21 +173,23 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
     * Heroku was used to deploy the live project
 * [VSCode](https://code.visualstudio.com/)
     * VSCode was used to create and edit the website and to commit to Git and push to GitHub
-* [Lucidchart](https://lucid.app/)
+* [draw.io](https://www.drawio.com/)
     * Lucidchart was used to create the flowchart
-* [PEP8](http://pep8online.com/)
-    * The PEP8 was used to validate all the Python code
+* [Pythonchecker](https://www.pythonchecker.com/)
+    * Pythonchecker was used to validate all the Python code
 * [Patorjk](https://patorjk.com)
     * Patorjk (ASCII Art Generator) was used to draw the titles for the game logos
 * [ASCII Art Archive](https://www.asciiart.eu/image-to-ascii)
     * ASCII Art Archive was used to convert images for the game logos
+* [Lambdatest](https://www.lambdatest.com/free-online-tools/python-beautifier)
+    * Lambdatest was used to format my python code to a final finish
 
 
 ## Testing
 
 ### **Initial tests**
 
-The primary goal for this project was for me to learn the basis of Python and build a command-line application that allows your users to register and play my own E.T. version of a hangman game that delivers a positive experience for the user. I have used Visual Studio Code to build the game and deployed to Heroku.  I choosed to develop the game functions localy and test the most basic ones in various stages before I deployed and started to build the app in Heroku and run it as a command-line application.
+The primary goal for this project was for me to learn the basis of Python and build a command-line application that allows your users to register and play my own E.T. version of a hangman game that delivers a positive experience for the user. I have used Visual Studio Code to build the game and deployed to Heroku. I choosed to develop the game functions localy and test the most basic ones in various stages before I deployed and started to build the app in Heroku and run it as a command-line application.
 
 - Macbook Pro (5120 X 2880)
 - LG HDR 4K" Monitor (3840x2160)
@@ -200,16 +202,9 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 - [CI_Python_Linter](https://pep8ci.herokuapp.com/) was also used to check all python files for errors, with no errors found.
 
-### Lighthouse
+### codeWOF
 
- Lighthouse will be used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
-
-* Desktop Results:
-
-  ![Lighthouse Result](.).
-
-
-
+ [CodeWOF](https://www.codewof.co.nz/style/python3/) was used to test code against the main conventions recommended for Python in PEP 8.
 
 *
 ## Deploying this Project
@@ -257,15 +252,15 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 ## Credits
 
-- Clear screen function - via [stack_overflow](https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console) and thanks to Peter Mortensen.
+- Clear screen function - via [Stack overflow](https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console) and thanks to Peter Mortensen.
 
-- Python Raw Strings - [Python_tutorial](https://www.pythontutorial.net/python-basics/python-raw-strings/)
+- Python Raw Strings - [Python tutorial](https://www.pythontutorial.net/python-basics/python-raw-strings/)
 
 - Python Interpolation and Formatting - [Real_Python](https://realpython.com/python-f-strings/)
 
-- Remove empty lines from a string - [Sling_Academy](https://www.slingacademy.com/article/python-3-ways-to-remove-empty-lines-from-a-string/)
+- Remove empty lines from a string - [Sling Academy](https://www.slingacademy.com/article/python-3-ways-to-remove-empty-lines-from-a-string/)
 
-- Trim Trailing White Space - [Visual_studio_code_user_guide](https://code.visualstudio.com/docs/editor/codebasics#_trim-trailing-whitespace)
+- Trim Trailing White Space - [Visual studio code user_guide](https://code.visualstudio.com/docs/editor/codebasics#_trim-trailing-whitespace)
 
 ### Content
 
@@ -276,7 +271,10 @@ The primary goal for this project was for me to learn the basis of Python and bu
 ### Information Sources / Resources
 
 * [W3Schools - Python](https://www.w3schools.com/python/)
+' [distansakademin - Youtube](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s)
 * [Stack Overflow](https://stackoverflow.com/)
+* [pypi.org](https://pypi.org/)
+* []
 
 
 
