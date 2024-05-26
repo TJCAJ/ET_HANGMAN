@@ -72,7 +72,7 @@ def validate_country(country_name, country_list):
     """
     Validate the country names against the list of countries
     """
-    return country_name.upper() in map (str.upper, country_list)
+    return country_name.upper() in map(str.upper, country_list)
 
 
 # Function to validate player's name
@@ -253,8 +253,7 @@ def game(random_word, player_name, player_country):
                 YOU HAVE GUESSED THE WORD {guess} ALREADY."""
                 )
             elif guess != random_word:
-                print(f"{Fore.LIGHTRED_EX}\n\t{
-                      guess}, IS NOT THE WORD. TRY AGAIN!")
+                print(f"{Fore.LIGHTRED_EX}\n\t{guess}, IS NOT THE WORD. TRY AGAIN!")
                 attempts -= 1
                 guessed_words.append(guess)
             else:
