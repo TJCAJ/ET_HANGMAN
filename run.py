@@ -91,8 +91,9 @@ def display_hangman(tries):
     Display hangman stages from the start of the game
     and change anytime the player doesn't guess the right letter
     """
-    cleaned_stages = remove_empty_lines(stages[tries])
+    cleaned_stages = clean_prompt(stages[tries])
     print(cleaned_stages)
+
 
 def remove_empty_lines(text):
     """
@@ -262,7 +263,8 @@ def game(random_word, player_name, player_country):
                 YOU HAVE GUESSED THE WORD {guess} ALREADY."""
                 )
             elif guess != random_word:
-                print(f"{Fore.LIGHTRED_EX}\n\t{guess}, IS NOT THE WORD. TRY AGAIN!")
+                print(f"{Fore.LIGHTRED_EX}\n\t{
+                      guess}, IS NOT THE WORD. TRY AGAIN!")
                 attempts -= 1
                 guessed_words.append(guess)
             else:
@@ -286,28 +288,21 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
     by letter or the word at once
     """
     if guessed and len(random_word) >= 6 and guessed_right <= 3:
-        print(f"{Fore.GREEN}{hangman_logo[3]}")
-        print(
-            f"""{Fore.LIGHTGREEN_EX}
-        YOU WIN {player_name}, YOU HAVE GUESSED THE WORD COMPLETELY AT ONCE!\n
-        """
-        )
+        result_message = f"""{Fore.GREEN}{hangman_logo[3]}
+        YOU WIN {name}, YOU HAVE GUESSED THE WORD COMPLETELY AT ONCE!\n"""
         score = score + EXTRA_SCORE + FULLY_WORD_SCORE
     elif guessed:
-        print(f"{Fore.GREEN}{hangman_logo[2]}")
-        print(
-            f"""{Fore.LIGHTGREEN_EX}
-        YOU WIN {player_name}, YOU HAVE GUESSED THE RIGHT WORD!\n
-        """
-        )
+        result_message = f"""{Fore.GREEN}{hangman_logo[2]}
+        YOU WIN {name}, YOU HAVE GUESSED THE RIGHT WORD!\n"""
         score = score + EXTRA_SCORE
     else:
-        print(f"{Fore.RED}{hangman_logo[1]}")
-        print(
-            f"""{Fore.LIGHTGREEN_EX}
-        YOU LOSE {player_name}, THE RIGHT WORD WAS {random_word}!
-        """
-        )
+        result_message = f"""{Fore.RED}{hangman_logo[1]}
+        YOU LOSE {name}, THE RIGHT WORD WAS {random_word}!"""
+
+    # Clean the result message
+    cleaned_result_message = clean_prompt(result_message)
+
+    print(cleaned_result_message)
     update_worksheet(name, score, country)
     display_score(score)
 

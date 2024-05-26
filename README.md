@@ -201,8 +201,6 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 - [CI_Python_Linter](https://pep8ci.herokuapp.com/) was also used to check all python files for errors, with no errors found.
 
-* 3 warnings were found in run.py during the testing of the code in PEP8. None of these affect how the game function.
-
 ### Lighthouse
 
  Lighthouse will be used to test Performance, Best Practices, Accessibility and SEO on the Desktop.
