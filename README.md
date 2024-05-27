@@ -1,4 +1,4 @@
-![Wireframe](./assets/images/et_wireframe.png)
+![Wireframe](./assets/images/wireframe_et_hangman.png)
 
 # E.T. Hangman - Game
 
@@ -304,9 +304,15 @@ The primary goal for this project was for me to learn the basis of Python and bu
 - LG HDR 4K" Monitor (3840x2160)
 
 <details>
-<summary>Test Sheet</summary>
+<summary>Test Sheet Page 1</summary>
 
-![test sheet](./assets/images/test_validation_sheet_et_hangman.jpg)
+![test sheet page 1](./assets/images/et_test_validation%20sheet_et_hangman.jpg)
+</details>
+
+<details>
+<summary>Test Sheet Page 2</summary>
+
+![test sheet page 2](./assets/images/et_test_validation%20sheet_et_hangman_page_2.jpg)
 </details>
 
 
