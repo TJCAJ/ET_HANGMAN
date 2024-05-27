@@ -388,6 +388,8 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 - Trim Trailing White Space - [Visual studio code user_guide](https://code.visualstudio.com/docs/editor/codebasics#_trim-trailing-whitespace)
 
+- Center Welcome message in Terminal - [Stack Overflow](52138936/how-to-center-text-in-python-3-after-an-input)
+
 
 ### Information Sources / Resources / References
 

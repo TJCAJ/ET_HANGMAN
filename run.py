@@ -4,6 +4,7 @@
 import datetime
 import os
 import gspread
+import shutil
 from google.oauth2.service_account import Credentials
 from colorama import Fore, init
 from et_hangman_words import get_word
@@ -169,17 +170,29 @@ def display_leaderboard():
     print("=" * separator_length)
 
 
+# Function to get terminal size
+def centre(s):
+
+    """
+    Get the Terminal size to center text.
+    """
+    return s.center(shutil.get_terminal_size().columns)
+
+
 # Function to display the welcome message
 def welcome():
     """
     Welcome message for new players.
     """
     print(Fore.LIGHTGREEN_EX + hangman_logo[0])
-    print(Fore.YELLOW + "\nWelcome to the E.T. Hangman Game!")
-    print(
-        Fore.YELLOW +
-        "Try to guess a name or a word related to the E.T. film.")
-    print(Fore.YELLOW + "You have a limited number of guesses, be wise!")
+
+
+# Function to center the display welcome message in terminal
+    print(centre(Fore.YELLOW + "Welcome to the E.T. Hangman Game!"))
+    print(centre(Fore.YELLOW + "Try to guess a name or a word \
+        related to the E.T. film."))
+    print(centre(Fore.YELLOW + "You have a limited \
+        number of guesses, be wise!"))
 
 
 # Function to play the game
