@@ -283,7 +283,7 @@ The primary goal for this project was for me to learn the basis of Python and bu
 <details>
 <summary>Test Sheet</summary>
 
-![test sheet](./assets/docs/images/test_sheet.png)
+![test sheet](./assets/images/test_validation_sheet_et_hangman.jpg)
 </details>
 
 ### **Validation**
