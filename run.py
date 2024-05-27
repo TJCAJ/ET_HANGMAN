@@ -367,7 +367,7 @@ if __name__ == "__main__":
         if not validate_name(player_name):
             print(
                 (f"{Fore.RED}This is not a valid name! " +
-                "Ensure it is max 6 letters".rstrip())
+                    "Ensure it is max 6 letters".rstrip())
             )
             continue
         else:
