@@ -288,20 +288,16 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
     if guessed and len(random_word) >= 6 and guessed_right <= 3:
         result_message = f"""{Fore.GREEN}{hangman_logo[3]}
         YOU WIN {name}, YOU NAILED THE CORRECT WORD OUTRIGHT AT ONCE!\n"""
-        score = score + EXTRA_SCORE + FULL_WORD_SCORE
+        score += EXTRA_SCORE + FULL_WORD_SCORE
     elif guessed:
-        result_message = f"""{
-            Fore.GREEN}{
-            hangman_logo[2]}
+        result_message = f"""{Fore.GREEN}{hangman_logo[2]}
         YOU WIN AND E.T. CAN PHONE HOME {name},
             YOU GUESSED THE RIGHT WORD!\n"""
-        score = score + EXTRA_SCORE
+        score += EXTRA_SCORE
     else:
-        result_message = f"""{
-            Fore.RED}{
-            hangman_logo[1]}
+        result_message = f"""{Fore.RED}{hangman_logo[1]}
         YOU LOSE AND E.T. GETS NO CALL {name},
-            THE RIGHT WORD WAS {random_word}!\n"""
+        THE RIGHT WORD WAS {random_word}!\n"""
 
     print(result_message)
     update_leaderboard(name, score, country)
