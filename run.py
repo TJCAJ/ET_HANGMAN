@@ -188,11 +188,11 @@ def welcome():
 
 
 # Function to center the display welcome message in terminal
-    print(centre(Fore.YELLOW + "Welcome to the E.T. Hangman Game!"))
-    print(centre(Fore.YELLOW + "Try to guess a name or a word \
-        related to the E.T. film."))
-    print(centre(Fore.YELLOW + "You have a limited \
-        number of guesses, be wise!"))
+    print(centre(Fore.YELLOW + "Welcome to the E.T. Hangman Game!").rstrip())
+    print(centre((Fore.YELLOW + "Try to guess a name or a word " +
+                  "related to the E.T. film.").rstrip()))
+    print(centre((Fore.YELLOW + "You have a limited " +
+                  "number of guesses, be wise!").rstrip()))
 
 
 # Function to play the game
