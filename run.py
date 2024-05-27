@@ -59,8 +59,8 @@ countries = COUNTRIES_SHEET.col_values(1)
 
 # Constants for scoring
 CORRECT_GUESSED = 25
-EXTRA_SCORE = 200
-FULLY_WORD_SCORE = 500
+EXTRA_SCORE = 350
+FULL_WORD_SCORE = 700
 
 # Message for playing again
 PLAY_AGAIN_MSG = f"""{Fore.CYAN}
@@ -288,19 +288,19 @@ def final_result(guessed, random_word, guessed_right, score, name, country):
     if guessed and len(random_word) >= 6 and guessed_right <= 3:
         result_message = f"""{Fore.GREEN}{hangman_logo[3]}
         YOU WIN {name}, YOU NAILED THE CORRECT WORD OUTRIGHT AT ONCE!\n"""
-        score = score + EXTRA_SCORE + FULLY_WORD_SCORE
+        score = score + EXTRA_SCORE + FULL_WORD_SCORE
     elif guessed:
         result_message = f"""{
             Fore.GREEN}{
             hangman_logo[2]}
-        YOU WIN AND E.T. CAN PHONE HOME {name}, \
+        YOU WIN AND E.T. CAN PHONE HOME {name},
             YOU GUESSED THE RIGHT WORD!\n"""
         score = score + EXTRA_SCORE
     else:
         result_message = f"""{
             Fore.RED}{
             hangman_logo[1]}
-        YOU LOSE AND E.T. GETS NO CALL {name}, \
+        YOU LOSE AND E.T. GETS NO CALL {name},
             THE RIGHT WORD WAS {random_word}!\n"""
 
     print(result_message)

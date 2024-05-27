@@ -155,7 +155,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 ![Hangman Stage 9 - Win](./assets/images/et_hangman_stage_9.png)
 </details>
 
-* If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
+* If the player guessed the full word letter by letter, they will see this feature and will win the game and get 350 points.
 
 
 ### ET Hangman Stage 10 - Win extra points
@@ -166,7 +166,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 ![Hangman Stage 10 - Win Extra](./assets/images/et_hangman_stage_10.png)
 </details>
 
-* If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
+* If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear and the player get 700 extra points.
 
 
 ### Menu Options
