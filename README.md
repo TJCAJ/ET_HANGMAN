@@ -1,6 +1,6 @@
 ![Wireframe](./assets/images/et_wireframe.png)
 
-# E.T Hangman - Game
+# E.T. Hangman - Game
 
 # Introduction
 This my third milestone project for Code Institute Full-stack development program: Python Terminal.<br><brZ>
@@ -30,14 +30,16 @@ ET Hangman is a Python terminal game, which runs in the Code Institute mock term
 2. Be challenged and try to improve on my previous scores.
 3. Compare my scores with other users on the Leaderboard.
 
+
 ## Design
 
 #### Colours
 * The colours in the game are supplied by the Python Colorama Model
 
 ### Flowcharts
-![Flowcharts](./assets/images/et_hangman_flowchart.jpg)<br>
+![Flowcharts](./assets/images/et_hangman_flowchart.png)<br>
 The logic and flow behind the game was not to hard, but at first I was thinking about making a game where you should guess numbers isnetad of words, that's why I updated my flowchart where the player should guess a number, to a more common solution where the player should guess a word. I created my flowcharts in [draw.io](https://www.drawio.com/) to help me with the logical flow throughout the application. Shown below.<br>
+
 
 ## Game Features
 
@@ -46,6 +48,7 @@ The logic and flow behind the game was not to hard, but at first I was thinking 
 ![Game Feature](./assets/images/et_hangman_welcome_message.png)
 
 This is how the player is invited to the game with a fun and warm welcome message that also includes a brief description of how the game works and that E.T. needs the player's help to phone home.
+
 
 ### ET Hangman Stage 1
 
@@ -65,6 +68,7 @@ This feature displays where the main scene happens. Here the user can play and s
 * Input to guess a letter or a full word
 * Input letters to either guess a letter only or the full word
 
+
 ### ET Hangman Stage 2
 
 <details>
@@ -76,6 +80,7 @@ This feature displays where the main scene happens. Here the user can play and s
 Any time the player guesses a wrong letter, a part of the hangman appears
 * 1 letter guessed wrong, the player will see the E.T. hangman figure and the first part of the hangman:  a rope, in green.
 
+
 ### ET Hangman Stage 3
 
 <details>
@@ -85,6 +90,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 </details>
 
 * 2 letters guessed wrong the player will see the E.T. hangman figure and 2 parts of the hangman a rope and head in green.
+
 
 ### ET Hangman Stage 4
 
@@ -96,6 +102,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 
 * 3 letters guessed wrong the player will see the E.T. hangman figure and 3 parts of the hangman rope, head and torso in yellow.
 
+
 ### ET Hangman Stage 5
 
 <details>
@@ -105,6 +112,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 </details>
 
 * 4 letters guessed wrong the player will see the E.T. hangman figure and 4 parts of the hangman rope, head, torso and the right arm in yellow.
+
 
 ### ET Hangman Stage 6
 
@@ -116,6 +124,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 
 * 5 letters guessed wrong the player will see the E.T. hangman figure and 5 parts of the hangman, rope, head, torso and both arms in red.
 
+
 ### ET Hangman Stage 7
 
 <details>
@@ -125,6 +134,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 </details>
 
 * 6 letters guessed wrong and the player will see the E.T. hangman figure and 6 parts of the hangman rope, head, torso, both arms and left leg in blue.
+
 
 ### ET Hangman Stage 8 - Lose
 
@@ -136,6 +146,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 
 * 7 letters guessed wrong the player will see the a new E.T. figure in red and a message that states: "Wrong guess E:T: stays! The game is over and the correct word is revealed for the player while the total score is displayed.
 
+
 ### ET Hangman Stage 9 - Win
 
 <details>
@@ -146,6 +157,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 
 * If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
 
+
 ### ET Hangman Stage 10 - Win extra points
 
 <details>
@@ -155,6 +167,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 </details>
 
 * If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
+
 
 ### Menu Options
 
@@ -169,6 +182,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 [B] - Leaderboard <br>
 [C] - Exit Game
 
+
 ### Leaderboard
 
 <details>
@@ -179,6 +193,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 
 * The Leaderboard shows the 15 players with the best scores.
 
+
 ### Exit Game
 
 <details>
@@ -188,6 +203,7 @@ Any time the player guesses a wrong letter, a part of the hangman appears
 </details>
 
 * The players will see this message if they will chose to exit the game by typing [C]. (In this cas "Otis" has played the game.)
+
 
 ### How to Play
 ![How to Play](./assets/images/et_hangman_game_rules.png)<br>
@@ -201,15 +217,18 @@ The player has 7 attempts to try to guess the right word by inputting letters or
 * If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](./assets/images/et_hangman_stage_10.png)
 * 7 letters guessed wrong and the player will see the [Loser Feature](./assets/images/et_hangman_stage_8.png)
 
+
 ## Storage Data
 
 ### Leaderboard
 I have used a Google sheet to save the player name, country, score and date. This sheet is connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform. This allows me to send and receive data as I had access to the Google Sheet API credentials. I havel also added these in the Config Vars to these credentials as I deployed the project in Heroku. Since this is sensitive data, I have added the creds.json in the Git ignore file. This ensure that these credentials are not pushed to the repository.
 
+
 ### World Countries
 I have also used a second Google sheet in order to validate the players country of origin. This sheet is of course also connected to the code via Google Drive and Google Sheet API by the Google Cloud Platform.
 
 I found the list of countries at [gigasheet.com](https://app.gigasheet.com/spreadsheet/list-of-all-countries-in-the-world---spreadsheet/19c9919d_dc1b_41e2_90ea_540d0e241df7?referrerId=https%3A%2F%2Fwww.gigasheet.com%2Fsample-data%2Flist-of-all-countries-in-the-world---spreadsheet)
+
 
 ### Code to Connect to Google Sheet
 
@@ -219,6 +238,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 ![Code to Connect to Google Sheet](./assets/images/et_hangman_google_sheets_connection.png)
 </details>
 
+
 ### Google Sheet Hangman Leaderboard
 
 <details>
@@ -226,6 +246,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 
 ![Google Sheet Hangman Leaderboard](./assets/images/et_hangman_leaderboard_google_sheet.jpg)
 </details>
+
 
 ### Google Sheet World Countries
 
@@ -242,6 +263,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 
 * [Python](https://www.python.org/)
 
+
 #### Python Packages
 
 * [Random](https://docs.python.org/3/library/random.html?highlight=random#module-random): returns a random integer to get a random word
@@ -250,6 +272,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 * [Colorama](https://pypi.org/project/colorama/): allows terminal text to be printed in different colours / styles
 * [datetime](https://pypi.org/project/datetime2/): adding the capability of constructing and representing date and time in many formats
 * [google.oauth2.service_accoun](https://google-auth.readthedocs.io/en/stable/index.html): credentials used to validate credentials and grant access to Google service accounts
+
 
 ### Frameworks - Libraries - Programs Used
 
@@ -260,7 +283,7 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 * [VSCode](https://code.visualstudio.com/)
     * VSCode was used to create and edit the website and to commit to Git and push to GitHub
 * [draw.io](https://www.drawio.com/)
-    * Lucidchart was used to create the flowchart
+    * draw.io was used to create the flowchart
 * [Pythonchecker](https://www.pythonchecker.com/)
     * Pythonchecker was used to validate all the Python code
 * [Patorjk](https://patorjk.com)
@@ -286,6 +309,7 @@ The primary goal for this project was for me to learn the basis of Python and bu
 ![test sheet](./assets/images/test_validation_sheet_et_hangman.jpg)
 </details>
 
+
 ### **Validation**
 ### PEP 8
 
@@ -305,7 +329,7 @@ The primary goal for this project was for me to learn the basis of Python and bu
 ![desktop lighthouse scores](./assets/images/lighthouse_test_et_hangman_game.png)
 </details>
 
-*
+
 ## Deploying this Project
 
 * This site was deployed by completing the following steps:
@@ -327,6 +351,7 @@ The primary goal for this project was for me to learn the basis of Python and bu
 15. Scroll to the bottom of the deploy page and select the preferred deployment type
 16. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
 
+
 ## Forking This Project
 
 * Fork this project by following the steps:
@@ -335,6 +360,7 @@ The primary goal for this project was for me to learn the basis of Python and bu
 2. Click on the project to be forked
 3. Find the Fork button at the top right of the page
 4. Once you click the button the fork will be in your repository
+
 
 ## Cloning This Project
 
@@ -349,6 +375,7 @@ The primary goal for this project was for me to learn the basis of Python and bu
 7. Type git clone and paste the URL copied in step 3
 8. Press Enter and the project is cloned
 
+
 ## Credits
 
 - Clear screen function - via [Stack overflow](https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console) and thanks to Peter Mortensen.
@@ -361,20 +388,25 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 - Trim Trailing White Space - [Visual studio code user_guide](https://code.visualstudio.com/docs/editor/codebasics#_trim-trailing-whitespace)
 
-### Content
 
-* All the content in the game is original
-* The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
+### Information Sources / Resources / References
+
+  ### All the content in the game is original
+
+- [Code Institute](https://codeinstitute.net/ie/) for their Love Sandwishes learning material.
+
+- [W3Schools](https://www.w3schools.com/) for additional learning material overall.
+
+- The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
+
+- [W3Schools - Python](https://www.w3schools.com/python/)
+- [distansakademin - Youtube](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s)
+- [Stack Overflow](https://stackoverflow.com/)
+- [pypi.org](https://pypi.org/)
+- [Canva](https://www.canva.com/)
 
 
-### Information Sources / Resources
 
-* [W3Schools - Python](https://www.w3schools.com/python/)
-* [distansakademin - Youtube](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s)
-* [Stack Overflow](https://stackoverflow.com/)
-* [pypi.org](https://pypi.org/)
-* [Canva](https://www.canva.com/)
+### **Acknowledgements**
 
-
-
-## Special Thanks
+I would like to thank my mentor Gareth Mc Girr for his continued guidance and expertise, my fellow classmates and Cohort Facilitator Kristyna Wach as well as the extended Code Institute Slack community where I found many answers to my questions just by searching previous threads.
