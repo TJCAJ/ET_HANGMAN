@@ -383,7 +383,7 @@ if __name__ == "__main__":
             break
     print(
         f"""{Fore.YELLOW}\n\t
-    HELLO {player_name}, WELCOME TO THE HANGMAN GAME!\n"""
+    HELLO {player_name}, PLEASE HELP E.T. WITH THE PASSWORD TO HIS PHONE!\n"""
     )
     print(f"{Fore.LIGHTBLUE_EX}{game_info[0]}")
     input(

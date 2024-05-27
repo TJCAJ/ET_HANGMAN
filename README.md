@@ -47,7 +47,7 @@ The logic and flow behind the game was not to hard, but at first I was thinking 
 
 ![Game Feature](./assets/images/et_hangman_welcome_message.png)
 
-This is how the player is invited to the game with a fun and warm welcome message that also includes a brief description of how the game works and that E.T. needs the player's help to phone home.
+This is how the player is invited to the game with a fun and warm welcome message that also includes a brief description of how the game works and that E.T. needs the player's help with the password to his phone.
 
 
 ### ET Hangman Stage 1
