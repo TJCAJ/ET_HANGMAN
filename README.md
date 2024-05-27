@@ -405,13 +405,12 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 - [W3Schools](https://www.w3schools.com/) for additional learning material overall.
 
-- The terminal function and template for the deployable application was provided by [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template)
+- [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template) The terminal function and template for the deployable application
 
-- [W3Schools - Python](https://www.w3schools.com/python/)
-- [distansakademin - Youtube](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s)
-- [Stack Overflow](https://stackoverflow.com/)
-- [pypi.org](https://pypi.org/)
-- [Canva](https://www.canva.com/)
+- [distansakademin - Youtube videos](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s) Basics in Python
+- [Stack Overflow](https://stackoverflow.com/) Various tips and references
+- [pypi.org](https://pypi.org/) Python Packages
+- [Canva](https://www.canva.com/) made it possible to make a nice wireframe
 
 
 
