@@ -1,4 +1,4 @@
-
+![Wireframe](./assets/images/et_wireframe.png)
 
 # E.T Hangman - Game
 
@@ -6,7 +6,7 @@
 This my third milestone project for Code Institute Full-stack development program: Python Terminal.<br><brZ>
 ET Hangman is a Python terminal game, which runs in the Code Institute mock terminal on Heroku. The main goal of the game is to guess a word in order to find the word that the computer randomly selects. The main theme is inspired by the original film for both ANSI figures and choice of words for the random word list, that consists of 49 different names and things that are directly related to Steven Spielbergs original.
 
-[Live Project Here](https://portfolio-project-3.herokuapp.com/)
+[Live Project Here](https://et-hangman-fb170fd57eab.herokuapp.com/)
 
 
 ## User Experience - UX
@@ -36,13 +36,24 @@ ET Hangman is a Python terminal game, which runs in the Code Institute mock term
 * The colours in the game are supplied by the Python Colorama Model
 
 ### Flowcharts
-![Flowcharts](./assets/images/readme/hangman-flowcharts.jpg)<br>
+![Flowcharts](./assets/images/et_hangman_flowchart.jpg)<br>
 The logic and flow behind the game was not to hard, but at first I was thinking about making a game where you should guess numbers isnetad of words, that's why I updated my flowchart where the player should guess a number, to a more common solution where the player should guess a word. I created my flowcharts in [draw.io](https://www.drawio.com/) to help me with the logical flow throughout the application. Shown below.<br>
 
 ## Game Features
 
+### ET Hangman Welcome Message
+
+![Game Feature](./assets/images/et_hangman_welcome_message.png)
+
+This is how the player is invited to the game with a fun and warm welcome message that also includes a brief description of how the game works and that E.T. needs the player's help to phone home.
+
 ### ET Hangman Stage 1
-![Game Feature](./assets/images/readme/hangman-feature-5.jpg)<br><br>
+
+<details>
+<summary>ET hangman stage 1</summary>
+
+![Game Feature](./assets/images/et_hangman_stage_1.png)
+</details>
 
 This feature displays where the main scene happens. Here the user can play and see the following information about the game:
 * Numbers of letters chosen by the computer
@@ -56,76 +67,139 @@ This feature displays where the main scene happens. Here the user can play and s
 
 ### ET Hangman Stage 2
 
-![Hangman Stage 2 ]()<br><br>
+<details>
+<summary>ET hangman stage 2</summary>
+
+![Hangman Stage 2 ](./assets/images/et_hangman_stage_2.png)
+</details>
+
 Any time the player guesses a wrong letter, a part of the hangman appears
 * 1 letter guessed wrong, the player will see the E.T. hangman figure and the first part of the hangman:  a rope, in green.
 
 ### ET Hangman Stage 3
 
-![Hangman Stage 3]()
+<details>
+<summary>ET hangman stage 3</summary>
+
+![Hangman Stage 3](./assets/images/et_hangman_stage_3.png)
+</details>
+
 * 2 letters guessed wrong the player will see the E.T. hangman figure and 2 parts of the hangman a rope and head in green.
 
 ### ET Hangman Stage 4
 
-![Hangman Stage 4]()
+<details>
+<summary>ET hangman stage 4</summary>
+
+![Hangman Stage 4](./assets/images/et_hangman_stage_4.png)
+</details>
+
 * 3 letters guessed wrong the player will see the E.T. hangman figure and 3 parts of the hangman rope, head and torso in yellow.
 
 ### ET Hangman Stage 5
 
-![Hangman Stage 5]()
+<details>
+<summary>ET hangman stage 5</summary>
+
+![Hangman Stage 5](./assets/images/et_hangman_stage_5.png)
+</details>
+
 * 4 letters guessed wrong the player will see the E.T. hangman figure and 4 parts of the hangman rope, head, torso and the right arm in yellow.
 
 ### ET Hangman Stage 6
 
-![Hangman Stage 6]()
+<details>
+<summary>ET hangman stage 6</summary>
+
+![Hangman Stage 6](./assets/images/et_hangman_stage_6.png)
+</details>
+
 * 5 letters guessed wrong the player will see the E.T. hangman figure and 5 parts of the hangman, rope, head, torso and both arms in red.
 
 ### ET Hangman Stage 7
 
-![Hangman Stage 7]()
+<details>
+<summary>ET hangman stage 7</summary>
+
+![Hangman Stage 7](./assets/images/et_hangman_stage_7.png)
+</details>
+
 * 6 letters guessed wrong and the player will see the E.T. hangman figure and 6 parts of the hangman rope, head, torso, both arms and left leg in blue.
 
 ### ET Hangman Stage 8 - Lose
-![Hangman Stage 8 - Lose]()
+
+<details>
+<summary>ET hangman stage 8</summary>
+
+![Hangman Stage 8 - Lose](./assets/images/et_hangman_stage_8.png)
+</details>
+
 * 7 letters guessed wrong the player will see the a new E.T. figure in red and a message that states: "Wrong guess E:T: stays! The game is over and the correct word is revealed for the player while the total score is displayed.
 
 ### ET Hangman Stage 9 - Win
 
-![Hangman Stage 9 - Win]()
+<details>
+<summary>ET hangman stage 9</summary>
+
+![Hangman Stage 9 - Win](./assets/images/et_hangman_stage_9.png)
+</details>
+
 * If the player guessed the full word letter by letter, they will see this feature and will win the game and get 200 points.
 
 ### ET Hangman Stage 10 - Win extra points
 
-![Hangman Stage 10 - Win Extra]()
+<details>
+<summary>ET hangman stage 10</summary>
+
+![Hangman Stage 10 - Win Extra](./assets/images/et_hangman_stage_10.png)
+</details>
+
 * If the player guessed all the letters that appear in the word thereby completing the word or at least guessing no more than 3 correct letters before completing the full word, this feature will appear.
 
 ### Menu Options
 
-![Menu Options]()
+<details>
+<summary>Menu options</summary>
+
+![Menu Options](./assets/images/et_hangman_stage_abc.png)
+</details>
+
 * In the end of the game users will have access to the menu where they can choose from these options: <br>
 [A] - Play Again <br>
 [B] - Leaderboard <br>
 [C] - Exit Game
 
 ### Leaderboard
-![Leaderboard]()
+
+<details>
+<summary>Leaderboard</summary>
+
+![Leaderboard](./assets/images/et_hangman_leaderboard.png)
+</details>
+
 * The Leaderboard shows the 15 players with the best scores.
 
 ### Exit Game
-![Exit Game]()
-* The players will see this message if they will chose to exit the game by typing [C].
+
+<details>
+<summary>Exit Game</summary>
+
+![Exit Game](./assets/images/et_hangman_closing_the_game.png)
+</details>
+
+* The players will see this message if they will chose to exit the game by typing [C]. (In this cas "Otis" has played the game.)
 
 ### How to Play
-![How to Play]()<br>
-![How to Play]()<br>
+![How to Play](./assets/images/et_hangman_game_rules.png)<br>
+![How to Play](./assets/images/et_hangman_stage_1.png)<br>
 The player has 7 attempts to try to guess the right word by inputting letters or can try to input all the letters to correctly complete the full . The word is randomly chosen by the computer from a list of words that are directly related to the original E.T. film by Steven Spielberg.
 * When the game starts the player can see how many letters are in the word [1] and the computer will ask the player to input a letter or a word [7].
 * If the player guesses the right letter, they will see a message from the computer [8] the letter guessed displayed in the word length [3], the hangman stage will remain the same [2] and the score will increase by 25 points [5]
 * If the player guesses a wrong letter, they will see a message from the computer [9] the letter guessed displayed in the wrong letters guesses [4], the hangman stage will turn to the next stage [2] and the number of attempts will decrease by 1 [6]
 * When the player types an invalid input, they will see a message from the computer [10].
-* If the user guesses the right word they will see the [Winner Feature](#Hangman-Stage-9---Win)
-* If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](#Hangman-Stage-10---Win)
-* 7 letters guessed wrong and the player will see the [Loser Feature](#Hangman-Stage-8---lose)
+* If the user guesses the right word they will see the [Winner Feature](./assets/images/et_hangman_stage_9.png)
+* If the player guessed the full word at once or at least no more than 3 letters guessed right before trying to guess the full word, they will win the game-winning 500 extra points and see this feature [Winner Feature / Extra Points](./assets/images/et_hangman_stage_10.png)
+* 7 letters guessed wrong and the player will see the [Loser Feature](./assets/images/et_hangman_stage_8.png)
 
 ## Storage Data
 
@@ -139,15 +213,27 @@ I found the list of countries at [gigasheet.com](https://app.gigasheet.com/sprea
 
 ### Code to Connect to Google Sheet
 
-![Code to Connect to Google Sheet](./assets/images/readme/hangman-creds.jpg)
+<details>
+<summary>Connect Google Sheet</summary>
+
+![Code to Connect to Google Sheet](./assets/images/et_hangman_google_sheets_connection.png)
+</details>
 
 ### Google Sheet Hangman Leaderboard
 
-![Google Sheet Hangman Leaderboard](./assets/images/readme/hangman-google-sheet.jpg)
+<details>
+<summary>Google Sheet Leaderboard</summary>
+
+![Google Sheet Hangman Leaderboard](./assets/images/et_hangman_leaderboard_google_sheet.jpg)
+</details>
 
 ### Google Sheet World Countries
 
-![Google Sheet World Countries](./assets/images/readme/hangman-google-sheet.jpg)
+<details>
+<summary>Google Sheet Countries</summary>
+
+![Google Sheet World Countries](./assets/images/et_hangman_world_countries_google_sheet.jpg)
+</details>
 
 
 ## Technologies Used
@@ -194,8 +280,13 @@ The primary goal for this project was for me to learn the basis of Python and bu
 - Macbook Pro (5120 X 2880)
 - LG HDR 4K" Monitor (3840x2160)
 
-![test sheet](./assets/docs/images/test_sheet.png)
+<details>
+<summary>Test Sheet</summary>
 
+![test sheet](./assets/docs/images/test_sheet.png)
+</details>
+
+### **Validation**
 ### PEP 8
 
 - This validator was installed in VS with pip install pep8 and used to validate every Python file in the project to check for  syntax errors in the project. This was done with the command flake8 in VS. Information about this was found here: [pep8](https://pypi.org/project/pep8/) and here: [flake](https://pypi.org/project/flake8/) [flake8](https://flake8.pycqa.org/en/latest/)
@@ -205,6 +296,14 @@ The primary goal for this project was for me to learn the basis of Python and bu
 ### codeWOF
 
  [CodeWOF](https://www.codewof.co.nz/style/python3/) was used to test code against the main conventions recommended for Python in PEP 8.
+
+ ### Lighthouse
+
+ <details>
+<summary>Lighthouse Scores for Desktop</summary>
+
+![desktop lighthouse scores](./assets/images/lighthouse_test_et_hangman_game.png)
+</details>
 
 *
 ## Deploying this Project
@@ -271,10 +370,10 @@ The primary goal for this project was for me to learn the basis of Python and bu
 ### Information Sources / Resources
 
 * [W3Schools - Python](https://www.w3schools.com/python/)
-' [distansakademin - Youtube](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s)
+* [distansakademin - Youtube](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s)
 * [Stack Overflow](https://stackoverflow.com/)
 * [pypi.org](https://pypi.org/)
-* []
+* [Canva](https://www.canva.com/)
 
 
 
