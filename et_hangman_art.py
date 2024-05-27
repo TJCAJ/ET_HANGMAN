@@ -163,10 +163,8 @@ game_info = [
     # ET hangman game rules
     Fore.CYAN
     + r"""
-    _________________________________________________________________________
-   |  |                ===============================                    |  |
+    _________________________________________________________________________                   |  |
    |  |                | |   G A M E   R U L E S   | |                    |  |
-   |  |                ===============================                    |  |
    |  |                                                                   |  |
    |  |  1 - You have 7 attempts to try to find the right password for    |  |
    |  |      E:T.s phone by inputting letters or the full word.           |  |
