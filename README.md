@@ -391,6 +391,8 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 ## Credits
 
+- Structure and basic logic for the game, [PedroCristo](https://github.com/PedroCristo/portfolio_project_3)
+
 - Clear screen function - via [Stack overflow](https://stackoverflow.com/questions/517970/how-can-i-clear-the-interpreter-console) and thanks to Peter Mortensen.
 
 - Python Raw Strings - [Python tutorial](https://www.pythontutorial.net/python-basics/python-raw-strings/)

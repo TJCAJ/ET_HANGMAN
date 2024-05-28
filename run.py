@@ -1,4 +1,12 @@
-"""This file runs the ET Hangman game."""
+"""This file runs the ET Hangman game.
+
+Description:
+This is a Hangman game implemented in Python.
+
+Credits:
+This project is inspired by and adapted from PedroChristo's Hangman Game
+(https://github.com/PedroCristo/portfolio_project_3)
+"""
 
 # Modules and libraries
 import datetime
@@ -216,6 +224,8 @@ def game(random_word, player_name, player_country):
     display_hangman(attempts)
     word_space(f"\t{full_word}")
     print("\n")
+
+    # Start of code directly inspired by PedroChristo's Hangman Game
     while not guessed and attempts > 0:
         print(f"{Fore.RED}\n\tWRONG LETTERS GUESSED:\n\t{guessed_wrong}\n")
         display_score(score)
@@ -289,6 +299,8 @@ def game(random_word, player_name, player_country):
         display_hangman(attempts)
         word_space(f"\t{full_word}")
         print("\n")
+# End of code directly inspired by PedroChristo's Hangman Game
+
     final_result(
         guessed, random_word, guessed_right, score, player_name, player_country
     )
