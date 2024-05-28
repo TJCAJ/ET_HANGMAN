@@ -46,9 +46,11 @@ SCOPE = [
 
 # Authorization for Google Sheets API
 CREDS = Credentials.from_service_account_file("creds.json")
+
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open("ET_Hangman_Leaderboard")
+
 # Open world countries sheet
 COUNTRIES_SHEET = GSPREAD_CLIENT.open("world_countries").sheet1
 
