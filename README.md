@@ -323,6 +323,12 @@ The primary goal for this project was for me to learn the basis of Python and bu
 
 - [CI_Python_Linter](https://pep8ci.herokuapp.com/) was also used to check all python files for errors, with no errors found.
 
+<details>
+<summary>CI Python Linter Validation</summary>
+
+![Python Linter test](./assets/images/ci_python_linther_validation.png)
+</details>
+
 ### codeWOF
 
  [CodeWOF](https://www.codewof.co.nz/style/python3/) was used to test code against the main conventions recommended for Python in PEP 8.
@@ -408,8 +414,11 @@ The primary goal for this project was for me to learn the basis of Python and bu
 - [Code Institute - Template](https://github.com/Code-Institute-Org/python-essentials-template) The terminal function and template for the deployable application
 
 - [distansakademin - Youtube videos](https://www.youtube.com/watch?v=IWx4gnv0L0o&t=3s) Basics in Python
+
 - [Stack Overflow](https://stackoverflow.com/) Various tips and references
+
 - [pypi.org](https://pypi.org/) Python Packages
+
 - [Canva](https://www.canva.com/) made it possible to make a nice wireframe
 
 
