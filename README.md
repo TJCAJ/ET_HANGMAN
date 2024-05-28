@@ -59,6 +59,7 @@ This is how the player is invited to the game with a fun and warm welcome messag
 </details>
 
 This feature displays where the main scene happens. Here the user can play and see the following information about the game:
+
 * Numbers of letters chosen by the computer
 * Hangman stages
 * Letters guessed right
